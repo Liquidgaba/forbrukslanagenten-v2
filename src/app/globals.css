@@ -174,9 +174,30 @@ body {
 }
 .btn-loan:hover { background: #2a1000; }
 
-/* Legacy aliases */
-.fjord-btn-cta { @apply btn-primary; }
-.fjord-btn-primary { @apply btn-outline; }
-.fjord-btn-green { @apply btn-loan; }
-.fjord-heading { @apply heading-md; }
-.fjord-section { @apply section; }
+/* Legacy aliases — duplicated (Tailwind v4 doesn't support @apply on custom classes) */
+.fjord-btn-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #3d1a00; color: white; font-weight: 700; font-size: 1rem;
+  padding: 0.875rem 2rem; border-radius: 999px; transition: background 0.15s;
+  font-family: 'Poppins', sans-serif; text-decoration: none; cursor: pointer;
+}
+.fjord-btn-cta:hover { background: #2a1000; }
+
+.fjord-btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; color: #3d1a00; font-weight: 600; font-size: 1rem;
+  padding: 0.875rem 2rem; border-radius: 999px; border: 2px solid #3d1a00;
+  transition: all 0.15s; font-family: 'Poppins', sans-serif; text-decoration: none; cursor: pointer;
+}
+.fjord-btn-primary:hover { background: #fceee6; }
+
+.fjord-btn-green {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #3d1a00; color: white; font-weight: 700; padding: 0.75rem 1.5rem;
+  border-radius: 999px; font-size: 0.9375rem; transition: background 0.15s;
+  font-family: 'Poppins', sans-serif; text-decoration: none; white-space: nowrap; cursor: pointer;
+}
+.fjord-btn-green:hover { background: #2a1000; }
+
+.fjord-heading { font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
+.fjord-section { padding-top: 4rem; padding-bottom: 4rem; }
