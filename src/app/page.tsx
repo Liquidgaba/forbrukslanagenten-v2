@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: 'Hva er et forbrukslån?', a: 'Et forbrukslån er et lån uten sikkerhet som du kan bruke til det du ønsker — oppussing, bilkjøp, refinansiering eller uventede utgifter. Du trenger ikke stille bolig eller bil som pant. Typisk lånebeløp er fra 10 000 til 600 000 kr.' },
   { q: 'Hvor mye kan jeg låne?', a: 'De fleste banker tilbyr forbrukslån fra 10 000 til 600 000 kr. Hvor mye du faktisk får innvilget avhenger av inntekt, gjeld og kredittscore. Har du god økonomi og fast jobb, får du gjerne bedre vilkår.' },
-  { q: 'Kan jeg få lån med betalingsanmerkning?', a: 'Ja, noen långivere vurderer søknader selv med betalingsanmerkninger — spesielt hvis du kan stille sikkerhet i bolig. <a href="/lan-med-betalingsanmerkning" class="text-brand-600 underline hover:text-brand-700">Les vår komplette guide om lån med betalingsanmerkning.</a>' },
+  { q: 'Kan jeg få lån med betalingsanmerkning?', a: 'Ja, noen långivere vurderer søknader selv med betalingsanmerkninger — spesielt hvis du kan stille sikkerhet i bolig. <a href="/lan-med-betalingsanmerkning" style="color:#3d1a00;text-decoration:underline">Les vår komplette guide om lån med betalingsanmerkning.</a>' },
   { q: 'Hva er forskjellen på nominell og effektiv rente?', a: 'Nominell rente er selve rentesatsen på lånet. Effektiv rente inkluderer i tillegg alle gebyrer (etableringsgebyr, termingebyr osv.). Effektiv rente gir det mest riktige bildet av hva lånet faktisk koster deg.' },
   { q: 'Hvor lang tid tar det å få svar på søknaden?', a: 'De fleste digitale långivere gir svar innen minutter til noen timer. Ved bruk av lånemeglere som sender søknaden til flere banker, kan det ta 1-2 virkedager å motta alle tilbud.' },
 ]
@@ -97,7 +97,14 @@ export default function Home() {
       </section>
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="pt-10">
+
+        {/* SEO ingress */}
+        <div className="pt-10 pb-2 max-w-3xl">
+          <p className="text-[16px] leading-relaxed" style={{color: '#3d2010'}}>
+            Forbrukslånagenten sammenligner renter og vilkår fra over 20 norske banker og lånemeglere. 
+            Vi hjelper deg å finne det billigste forbrukslånet — enten du ønsker å refinansiere, 
+            finansiere en oppussing, eller trenger et smålån raskt. Sammenligning er gratis og påvirker ikke kredittscore.
+          </p>
         </div>
 
         {/* Calculator */}
@@ -117,19 +124,19 @@ export default function Home() {
         </section>
 
         {/* Payment remarks CTA */}
-        <section className="mt-16 rounded-2xl p-6 sm:p-8 overflow-hidden" style={{background: 'linear-gradient(135deg, #f0f4f9 0%, #e8eef5 100%)', border: '1px solid #d9e5f0'}}>
+        <section className="mt-16 rounded-2xl p-6 sm:p-8" style={{background: '#fdf0e6', border: '1px solid #e8ddd5'}}>
           <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[24px]">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{background: '#fceee6', border: '1px solid #e8ddd5', fontSize: '22px'}}>
               🔓
             </div>
             <div className="flex-grow">
-              <h2 className="text-[18px] font-bold text-text-primary mb-1">Har du betalingsanmerkning?</h2>
-              <p className="text-[14px] text-text-secondary leading-relaxed">
+              <h2 className="text-[18px] font-bold mb-1" style={{color: '#1a0800'}}>Har du betalingsanmerkning?</h2>
+              <p className="text-[14px] leading-relaxed" style={{color: '#7a5c45'}}>
                 Det finnes muligheter — selv med anmerkninger på kredittsjekken. 
                 Noen långivere spesialiserer seg på dette, spesielt med sikkerhet i bolig.
               </p>
             </div>
-            <Link href="/lan-med-betalingsanmerkning" className="fjord-btn-primary inline-flex items-center gap-2 text-[14px] whitespace-nowrap flex-shrink-0">
+            <Link href="/lan-med-betalingsanmerkning" className="btn-outline text-[14px] px-5 py-2.5 whitespace-nowrap flex-shrink-0">
               Les mer →
             </Link>
           </div>
@@ -143,11 +150,11 @@ export default function Home() {
               <Link
                 key={c.href}
                 href={c.href}
-                className="group flex items-start gap-4 bg-white rounded-xl border border-border p-5 hover:border-brand-200 hover:shadow-[0_2px_12px_rgba(0,107,207,0.06)] transition-all duration-200"
+                className="group flex items-start gap-4 bg-white rounded-xl border border-border p-5 hover:border-border transition-all duration-200"
               >
                 <span className="text-[22px] flex-shrink-0 mt-0.5">{c.icon}</span>
                 <div>
-                  <h3 className="text-[15px] font-semibold text-text-primary group-hover:text-brand-600 transition-colors">{c.title}</h3>
+                  <h3 className="text-[15px] font-semibold text-text-primary group-hover:text-text-secondary transition-colors">{c.title}</h3>
                   <p className="text-[13px] text-text-secondary mt-1 leading-relaxed">{c.desc}</p>
                 </div>
               </Link>
