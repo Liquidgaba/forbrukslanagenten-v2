@@ -1,213 +1,206 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fjordkraft-inspired: Deep Norwegian Navy + Nordic Green */
-  
-  /* Primary: Deep Navy — like Fjordkraft's hero */
-  --color-navy-50: #eef2f8;
-  --color-navy-100: #d5e0ef;
-  --color-navy-200: #a8c0de;
-  --color-navy-300: #6e96c4;
-  --color-navy-400: #3e70a8;
-  --color-navy-500: #245185;
-  --color-navy-600: #1a3d68;
-  --color-navy-700: #122d4e;
-  --color-navy-800: #0d2038;
-  --color-navy-900: #081422;
-  --color-navy-950: #040a11;
+  /* Norwegian Comparison Site — Clean, editorial, lots of air */
+  /* Inspired by Fjordkraft's design language: Roboto, functional, trustworthy */
 
-  /* CTA: Norwegian Green — like Fjordkraft's green buttons */
-  --color-green-50: #e8f5ec;
-  --color-green-100: #c5e8cf;
-  --color-green-200: #8dd0a3;
-  --color-green-300: #52b274;
-  --color-green-400: #27944e;
-  --color-green-500: #00773a;
-  --color-green-600: #005f2e;
-  --color-green-700: #004823;
-  --color-green-800: #003018;
-  --color-green-900: #001c0e;
+  /* Primary: Norwegian Forest Green — distinctive, not generic */
+  --color-primary-50: #edf7ee;
+  --color-primary-100: #d0ecd2;
+  --color-primary-200: #9dd6a2;
+  --color-primary-300: #64ba6c;
+  --color-primary-400: #3a9e44;
+  --color-primary-500: #1e8328;
+  --color-primary-600: #156820;
+  --color-primary-700: #0e4e18;
+  --color-primary-800: #083610;
+  --color-primary-900: #041f09;
 
-  /* Accent: Warm slate for secondary text */
-  --color-slate-50: #f8f9fa;
-  --color-slate-100: #f1f3f5;
-  --color-slate-200: #e9ecef;
-  --color-slate-300: #dee2e6;
-  --color-slate-400: #ced4da;
-  --color-slate-500: #adb5bd;
-  --color-slate-600: #6c757d;
-  --color-slate-700: #495057;
-  --color-slate-800: #343a40;
-  --color-slate-900: #212529;
+  /* Neutral greys — Fjordkraft uses these extensively */
+  --color-grey-50: #f5f5f5;
+  --color-grey-100: #e8e9e9;
+  --color-grey-200: #dddedf;
+  --color-grey-300: #d1d3d4;
+  --color-grey-400: #a7a9ac;
+  --color-grey-500: #999999;
+  --color-grey-600: #767676;
+  --color-grey-700: #3d3d3f;
+  --color-grey-800: #282828;
+  --color-grey-900: #1a1a1a;
+
+  /* Accent: warm teal for highlights */
+  --color-teal-400: #00a2b9;
+  --color-teal-500: #007ea4;
+  --color-teal-600: #006080;
 
   /* Surfaces */
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
-  --color-surface-sunken: #f8f9fa;
-  --color-surface-alt: #f1f3f5;
+  --color-surface-muted: #f5f5f5;
+  --color-surface-alt: #e8e9e9;
 
-  --color-text-primary: #0d2038;
-  --color-text-secondary: #495057;
-  --color-text-muted: #6c757d;
-  --color-text-light: #adb5bd;
+  --color-text-primary: #282828;
+  --color-text-secondary: #3d3d3f;
+  --color-text-muted: #767676;
+  --color-text-light: #999999;
 
-  --color-border: #dee2e6;
-  --color-border-hover: #ced4da;
+  --color-border: #dddedf;
+  --color-border-strong: #a7a9ac;
 
-  /* Hero dark surface */
-  --color-hero-bg: #122d4e;
-  --color-hero-text: #ffffff;
-  --color-hero-muted: rgba(255,255,255,0.7);
+  --font-sans: 'Roboto', Helvetica, Arial, sans-serif;
 
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
 }
 
 body {
-  background-color: var(--color-surface);
-  color: var(--color-text-primary);
-  line-height: 1.65;
+  background-color: #ffffff;
+  color: #282828;
+  line-height: 1.6;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 ::selection {
-  background-color: var(--color-navy-100);
-  color: var(--color-navy-900);
+  background-color: #d0ecd2;
+  color: #0e4e18;
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-surface-alt); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #d1d3d4; border-radius: 4px; }
 
-/* Sections */
+/* Fjordkraft-style generous section spacing */
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 @media (min-width: 768px) {
-  .section { padding-top: 7rem; padding-bottom: 7rem; }
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
-/* Headings — Fjordkraft style: bold, tight tracking */
+/* Headings — Roboto bold, tight, editorial */
 .heading-xl {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 .heading-lg {
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.12;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
 }
 .heading-md {
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
-/* Fjord card — clean, minimal shadow */
+/* Card — clean, no heavy shadows, Fjordkraft-like */
 .fjord-card {
   background: white;
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 1px 4px rgba(13,32,56,0.05);
-  transition: box-shadow 0.2s, transform 0.2s;
+  border-radius: 8px;
+  border: 1px solid #dddedf;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .fjord-card:hover {
-  box-shadow: 0 4px 20px rgba(13,32,56,0.1);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-color: #a7a9ac;
 }
 
-/* Primary CTA — Fjordkraft green */
+/* Primary CTA — Norwegian green */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-green-600);
+  background: #156820;
   color: white;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.875rem 2rem;
-  border-radius: 8px;
-  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
-  letter-spacing: 0.005em;
+  border-radius: 6px;
+  transition: background 0.15s;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  cursor: pointer;
 }
-.btn-primary:hover {
-  background: var(--color-green-700);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0,95,46,0.3);
-}
+.btn-primary:hover { background: #0e4e18; }
 
-/* Secondary — navy outline */
-.btn-secondary {
+/* Ghost button */
+.btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: white;
-  font-weight: 600;
+  color: #156820;
+  font-weight: 700;
   font-size: 1rem;
   padding: 0.875rem 2rem;
-  border-radius: 8px;
-  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  border: 2px solid #156820;
   transition: all 0.15s;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  cursor: pointer;
 }
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
+.btn-ghost:hover {
+  background: #edf7ee;
 }
 
-/* Loan card CTA — green */
+/* Loan card CTA */
 .btn-loan {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-green-600);
+  background: #156820;
   color: white;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 0.9375rem;
-  transition: background 0.15s, box-shadow 0.15s;
+  transition: background 0.15s;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 }
-.btn-loan:hover {
-  background: var(--color-green-700);
-  box-shadow: 0 4px 12px rgba(0,95,46,0.25);
-}
+.btn-loan:hover { background: #0e4e18; }
 
-/* Secondary dark */
-.btn-dark {
+/* Ghost hero */
+.btn-hero-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-navy-800);
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 0.9375rem;
-  transition: background 0.15s;
+  background: transparent;
+  color: #282828;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  border: 1.5px solid #a7a9ac;
+  transition: all 0.15s;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
-.btn-dark:hover { background: var(--color-navy-900); }
+.btn-hero-ghost:hover {
+  border-color: #3d3d3f;
+  color: #1a1a1a;
+}
 
-/* Legacy aliases for compat */
+/* Legacy compat */
 .fjord-btn-cta { @apply btn-primary; }
-.fjord-btn-primary { @apply btn-dark; }
+.fjord-btn-primary { @apply btn-ghost; }
 .fjord-btn-green { @apply btn-loan; }
 .fjord-heading { @apply heading-md; }
 .fjord-section { @apply section; }

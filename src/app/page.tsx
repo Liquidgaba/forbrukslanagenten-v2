@@ -38,38 +38,54 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }])) }} />
 
-      {/* Hero — Fjordkraft style: dark navy, big type, left-aligned */}
-      <section style={{background: '#122d4e'}}>
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-16 sm:pt-24 pb-14 sm:pb-20">
-          <div className="max-w-2xl">
-            {/* Eyebrow — simple, no pill */}
-            <p className="text-[13px] font-semibold uppercase tracking-widest mb-6" style={{color: 'rgba(255,255,255,0.55)', letterSpacing: '0.12em'}}>
-              Uavhengig sammenligning · Mars 2026
-            </p>
-
-            <h1 className="heading-xl text-[42px] sm:text-[60px] lg:text-[68px] text-white mb-6">
-              Finn billigste<br />forbrukslån
-            </h1>
-            <p className="text-[18px] sm:text-[20px] leading-relaxed mb-10" style={{color: 'rgba(255,255,255,0.75)', maxWidth: '520px'}}>
-              Vi sammenligner over 20 norske banker og långivere — slik at du alltid får det beste tilbudet.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#topp-lan" className="btn-primary text-[16px] px-8 py-4">
-                Se beste lån nå
-              </Link>
-              <Link href="#kalkulator" className="btn-secondary text-[16px] px-8 py-4">
-                Beregn månedskostnad
-              </Link>
+      {/* Hero — Fjordkraft-inspired: light, airy, left-aligned, editorial */}
+      <section style={{background: '#f5f5f5', borderBottom: '1px solid #e8e9e9'}}>
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-14 sm:pt-20 pb-12 sm:pb-16">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Left: headline */}
+            <div>
+              <p className="text-[13px] font-medium uppercase mb-5" style={{color: '#767676', letterSpacing: '0.1em'}}>
+                Uavhengig · Oppdatert mars 2026 · 20+ banker
+              </p>
+              <h1 className="heading-xl text-[40px] sm:text-[54px] lg:text-[62px] mb-5" style={{color: '#282828'}}>
+                Finn billigste<br />forbrukslån<br />
+                <span style={{color: '#156820'}}>i Norge</span>
+              </h1>
+              <p className="text-[17px] sm:text-[19px] leading-relaxed mb-8" style={{color: '#3d3d3f', maxWidth: '480px'}}>
+                Vi sammenligner renter og vilkår fra alle store norske banker. Du får det beste tilbudet — gratis og uten innvirkning på kredittscore.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="#topp-lan" className="btn-primary text-[16px] px-7 py-4">
+                  Se beste lån nå
+                </Link>
+                <Link href="#kalkulator" className="btn-hero-ghost text-[16px] px-7 py-4">
+                  Beregn månedskostnad
+                </Link>
+              </div>
             </div>
 
-            {/* Trust — minimal, clean */}
-            <div className="flex flex-wrap gap-x-8 gap-y-3 mt-12 pt-8" style={{borderTop: '1px solid rgba(255,255,255,0.15)'}}>
-              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ 20+ banker</span>
-              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ Gratis og uavhengig</span>
-              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ Ingen påvirkning på kredittscore</span>
+            {/* Right: clean trust facts */}
+            <div className="hidden lg:block">
+              <div className="space-y-4">
+                {[
+                  { num: '20+', label: 'Norske banker og långivere sammenlignet' },
+                  { num: '100%', label: 'Gratis og uavhengig — vi tjener kun på godkjente lån' },
+                  { num: '0 kr', label: 'Kostnad for deg å sammenligne og søke' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-5 bg-white rounded-lg p-5" style={{border: '1px solid #e8e9e9'}}>
+                    <div className="text-[32px] font-black flex-shrink-0" style={{color: '#156820', fontFamily: 'Roboto, sans-serif'}}>{item.num}</div>
+                    <div className="text-[15px]" style={{color: '#3d3d3f'}}>{item.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* Mobile trust */}
+          <div className="lg:hidden flex flex-wrap gap-5 mt-8 pt-6" style={{borderTop: '1px solid #d1d3d4'}}>
+            <span className="text-[14px]" style={{color: '#767676'}}>✓ 20+ banker</span>
+            <span className="text-[14px]" style={{color: '#767676'}}>✓ Gratis og uavhengig</span>
+            <span className="text-[14px]" style={{color: '#767676'}}>✓ Ingen påvirkning på kredittscore</span>
           </div>
         </div>
       </section>
