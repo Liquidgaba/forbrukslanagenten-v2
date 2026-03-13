@@ -24,8 +24,8 @@ export interface LoanProvider {
 // Channel ID: bedretilbud.no (our approved channel in Adtraction)
 const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || '1691647901'
 
-// Programs where our channel is approved
-const APPROVED_AD_IDS = new Set([
+// Programs where our channel is approved — ONLY show these
+export const APPROVED_AD_IDS = new Set([
   1259715125,  // Okida
   1061611455,  // Klikklån
   1638602458,  // Zensum
@@ -43,12 +43,8 @@ const APPROVED_AD_IDS = new Set([
   1330052847,  // Paymark Finans
 ])
 
-export function getTrackingUrl(adId: number, fallbackUrl?: string): string {
-  if (APPROVED_AD_IDS.has(adId)) {
-    return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
-  }
-  // Not approved yet — link directly to bank
-  return fallbackUrl || '#'
+export function getTrackingUrl(adId: number): string {
+  return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
 }
 
 export const loanProviders: LoanProvider[] = [
@@ -500,29 +496,34 @@ export const loanProviders: LoanProvider[] = [
   },
 ]
 
+// Only return providers we earn money from
+function approvedOnly(providers: LoanProvider[]): LoanProvider[] {
+  return providers.filter(p => APPROVED_AD_IDS.has(p.adId))
+}
+
 // Helper functions
 export function getTopProviders(count: number = 10): LoanProvider[] {
-  return [...loanProviders]
+  return approvedOnly([...loanProviders])
     .sort((a, b) => (b.epc || 0) - (a.epc || 0))
     .slice(0, count)
 }
 
 export function getProvidersForRemarks(): LoanProvider[] {
-  return loanProviders.filter(p => p.acceptsPaymentRemarks)
+  return approvedOnly(loanProviders.filter(p => p.acceptsPaymentRemarks))
 }
 
 export function getProvidersByType(type: LoanProvider['loanType']): LoanProvider[] {
-  return loanProviders.filter(p => p.loanType === type)
+  return approvedOnly(loanProviders.filter(p => p.loanType === type))
 }
 
 export function getSecuredProviders(): LoanProvider[] {
-  return loanProviders.filter(p => p.loanType === 'secured' || p.loanType === 'refinancing')
+  return approvedOnly(loanProviders.filter(p => p.loanType === 'secured' || p.loanType === 'refinancing'))
 }
 
 export function getUnsecuredProviders(): LoanProvider[] {
-  return loanProviders.filter(p => p.loanType === 'unsecured' || p.loanType === 'broker')
+  return approvedOnly(loanProviders.filter(p => p.loanType === 'unsecured' || p.loanType === 'broker'))
 }
 
 export function getSmallLoanProviders(): LoanProvider[] {
-  return loanProviders.filter(p => p.loanType === 'smalan' || (p.minAmount && p.minAmount <= 10000))
+  return approvedOnly(loanProviders.filter(p => p.loanType === 'smalan' || (p.minAmount && p.minAmount <= 10000)))
 }
