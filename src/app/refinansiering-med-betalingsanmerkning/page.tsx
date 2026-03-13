@@ -27,7 +27,7 @@ export default function RefinansieringMedBetalingsanmerkning() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
-      <Breadcrumb items={[{ label: 'Refinansiering', href: '/refinansiering' }, { label: 'Med betalingsanmerkning' }]} />
+      <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Med betalingsanmerkning' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Refinansiering med betalingsanmerkning</h1>

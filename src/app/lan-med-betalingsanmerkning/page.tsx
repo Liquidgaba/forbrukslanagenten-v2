@@ -30,7 +30,7 @@ export default function LanMedBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån med betalingsanmerkning', url: '/lan-med-betalingsanmerkning' }])) }} />
 
-      <Breadcrumb items={[{ label: 'Lån med betalingsanmerkning' }]} />
+      <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån med betalingsanmerkning i 2026</h1>

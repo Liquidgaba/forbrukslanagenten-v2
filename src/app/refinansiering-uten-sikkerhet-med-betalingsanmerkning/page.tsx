@@ -29,7 +29,7 @@ export default function RefinansieringUtenSikkerhetMedBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Refinansiering', url: '/refinansiering' }, { name: 'Uten sikkerhet med betalingsanmerkning', url: '/refinansiering-uten-sikkerhet-med-betalingsanmerkning' }])) }} />
 
-      <Breadcrumb items={[{ label: 'Refinansiering', href: '/refinansiering' }, { label: 'Uten sikkerhet med betalingsanmerkning' }]} />
+      <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Uten sikkerhet med betalingsanmerkning' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Refinansiering uten sikkerhet med betalingsanmerkning</h1>

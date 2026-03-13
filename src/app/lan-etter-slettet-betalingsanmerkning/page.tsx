@@ -27,7 +27,7 @@ export default function LanEtterSlettetBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån med betalingsanmerkning', url: '/lan-med-betalingsanmerkning' }, { name: 'Etter slettet anmerkning', url: '/lan-etter-slettet-betalingsanmerkning' }])) }} />
 
-      <Breadcrumb items={[{ label: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { label: 'Etter slettet anmerkning' }]} />
+      <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Etter slettet anmerkning' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån etter slettet betalingsanmerkning</h1>

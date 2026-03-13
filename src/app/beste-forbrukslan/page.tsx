@@ -26,7 +26,7 @@ export default function BesteForbrukslan() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
-      <Breadcrumb items={[{ label: 'Beste forbrukslån' }]} />
+      <Breadcrumb items={[{ name: 'Beste forbrukslån' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Beste forbrukslån i 2026 — Topp 10</h1>

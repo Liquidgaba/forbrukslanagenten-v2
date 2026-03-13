@@ -29,7 +29,7 @@ export default function Forbrukslan() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
-      <Breadcrumb items={[{ label: 'Forbrukslån' }]} />
+      <Breadcrumb items={[{ name: 'Forbrukslån' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Forbrukslån i Norge — Den komplette guiden for 2026</h1>

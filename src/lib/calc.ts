@@ -4,8 +4,18 @@ export function calculateMonthlyPayment(principal: number, annualRate: number, m
   return (principal * r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1)
 }
 
+export const calculateMonthly = calculateMonthlyPayment
+
 export function calculateTotalCost(principal: number, annualRate: number, months: number): number {
   return calculateMonthlyPayment(principal, annualRate, months) * months
+}
+
+export function calculateTotal(monthly: number, months: number): number {
+  return monthly * months
+}
+
+export function calculateInterestCost(principal: number, total: number): number {
+  return total - principal
 }
 
 export function formatNOK(amount: number): string {

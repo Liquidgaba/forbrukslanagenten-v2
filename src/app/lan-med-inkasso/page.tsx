@@ -22,7 +22,7 @@ export default function LanMedInkasso() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
-      <Breadcrumb items={[{ label: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { label: 'Lån med inkasso' }]} />
+      <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Lån med inkasso' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån med inkasso</h1>

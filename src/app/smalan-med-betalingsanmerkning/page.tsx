@@ -27,7 +27,7 @@ export default function SmalanMedBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån med betalingsanmerkning', url: '/lan-med-betalingsanmerkning' }, { name: 'Smålån med betalingsanmerkning', url: '/smalan-med-betalingsanmerkning' }])) }} />
 
-      <Breadcrumb items={[{ label: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { label: 'Smålån med betalingsanmerkning' }]} />
+      <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Smålån med betalingsanmerkning' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Smålån med betalingsanmerkning</h1>

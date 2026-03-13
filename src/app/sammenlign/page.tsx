@@ -17,7 +17,7 @@ export default function Sammenlign() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <Breadcrumb items={[{ label: 'Sammenlign forbrukslån' }]} />
+      <Breadcrumb items={[{ name: 'Sammenlign forbrukslån' }]} />
       <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Sammenlign forbrukslån</h1>
