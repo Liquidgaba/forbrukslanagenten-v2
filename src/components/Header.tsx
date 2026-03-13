@@ -4,10 +4,10 @@ import { useState } from 'react'
 
 const navItems = [
   { href: '/forbrukslan', label: 'Forbrukslån' },
-  { href: '/beste-forbrukslan', label: 'Beste lån' },
-  { href: '/lan-med-betalingsanmerkning', label: 'Lån med anmerkning' },
+  { href: '/lan-med-betalingsanmerkning', label: 'Med anmerkning' },
   { href: '/refinansiering', label: 'Refinansiering' },
-  { href: '/sammenlign', label: 'Sammenlign' },
+  { href: '/smalan', label: 'Smålån' },
+  { href: '/kalkulator', label: 'Kalkulator' },
 ]
 
 export default function Header() {
