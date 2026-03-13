@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     locale: 'nb_NO',
     siteName: 'Forbrukslånagenten',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Forbrukslånagenten — Sammenlign forbrukslån i Norge' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://xn--forbrukslnagenten-hrb.no' },
