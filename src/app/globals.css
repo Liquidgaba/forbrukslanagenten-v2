@@ -1,170 +1,213 @@
 @import "tailwindcss";
 
 @theme {
-  /* Nordic Navy + Warm Amber — Distinctly Norwegian, not generic SaaS blue */
+  /* Fjordkraft-inspired: Deep Norwegian Navy + Nordic Green */
   
-  /* Primary: Deep Nordic Navy */
-  --color-brand-50: #f0f4f9;
-  --color-brand-100: #d9e5f0;
-  --color-brand-200: #b3cbe1;
-  --color-brand-300: #7aaac8;
-  --color-brand-400: #4585ab;
-  --color-brand-500: #2a6a8f;
-  --color-brand-600: #1e5275;
-  --color-brand-700: #163d58;
-  --color-brand-800: #0f2d42;
-  --color-brand-900: #091e2e;
-  --color-brand-950: #050f18;
+  /* Primary: Deep Navy — like Fjordkraft's hero */
+  --color-navy-50: #eef2f8;
+  --color-navy-100: #d5e0ef;
+  --color-navy-200: #a8c0de;
+  --color-navy-300: #6e96c4;
+  --color-navy-400: #3e70a8;
+  --color-navy-500: #245185;
+  --color-navy-600: #1a3d68;
+  --color-navy-700: #122d4e;
+  --color-navy-800: #0d2038;
+  --color-navy-900: #081422;
+  --color-navy-950: #040a11;
 
-  /* Accent: Warm Amber/Gold — Premium, human, not generic green */
-  --color-amber-50: #fffbf0;
-  --color-amber-100: #fef3d0;
-  --color-amber-200: #fde59a;
-  --color-amber-300: #fbd05e;
-  --color-amber-400: #f9bc2e;
-  --color-amber-500: #e8a70f;
-  --color-amber-600: #c98a08;
-  --color-amber-700: #a36b06;
-  --color-amber-800: #7d4f05;
-  --color-amber-900: #5a3804;
+  /* CTA: Norwegian Green — like Fjordkraft's green buttons */
+  --color-green-50: #e8f5ec;
+  --color-green-100: #c5e8cf;
+  --color-green-200: #8dd0a3;
+  --color-green-300: #52b274;
+  --color-green-400: #27944e;
+  --color-green-500: #00773a;
+  --color-green-600: #005f2e;
+  --color-green-700: #004823;
+  --color-green-800: #003018;
+  --color-green-900: #001c0e;
 
-  /* CTA: Forest Green — slightly warmer than generic green */
-  --color-cta-50: #f0f9f4;
-  --color-cta-100: #dcf0e5;
-  --color-cta-200: #b4e0c7;
-  --color-cta-300: #7fc8a0;
-  --color-cta-400: #48ab76;
-  --color-cta-500: #28915a;
-  --color-cta-600: #1a7545;
-  --color-cta-700: #145c36;
-  --color-cta-800: #0f4428;
-  --color-cta-900: #0a2e1c;
+  /* Accent: Warm slate for secondary text */
+  --color-slate-50: #f8f9fa;
+  --color-slate-100: #f1f3f5;
+  --color-slate-200: #e9ecef;
+  --color-slate-300: #dee2e6;
+  --color-slate-400: #ced4da;
+  --color-slate-500: #adb5bd;
+  --color-slate-600: #6c757d;
+  --color-slate-700: #495057;
+  --color-slate-800: #343a40;
+  --color-slate-900: #212529;
 
-  /* Warm surfaces — not clinical white */
-  --color-surface: #fdfcfb;
+  /* Surfaces */
+  --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
-  --color-surface-sunken: #f5f3ef;
-  --color-surface-alt: #ede9e3;
-  --color-surface-dark: #0f2d42;
+  --color-surface-sunken: #f8f9fa;
+  --color-surface-alt: #f1f3f5;
 
-  --color-text-primary: #0f2029;
-  --color-text-secondary: #3d5168;
-  --color-text-muted: #6b7f94;
-  --color-text-light: #a0b0bf;
+  --color-text-primary: #0d2038;
+  --color-text-secondary: #495057;
+  --color-text-muted: #6c757d;
+  --color-text-light: #adb5bd;
 
-  --color-border: #e0dbd5;
-  --color-border-hover: #c8c1ba;
+  --color-border: #dee2e6;
+  --color-border-hover: #ced4da;
 
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Hero dark surface */
+  --color-hero-bg: #122d4e;
+  --color-hero-text: #ffffff;
+  --color-hero-muted: rgba(255,255,255,0.7);
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 body {
   background-color: var(--color-surface);
   color: var(--color-text-primary);
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 ::selection {
-  background-color: var(--color-brand-100);
-  color: var(--color-brand-900);
+  background-color: var(--color-navy-100);
+  color: var(--color-navy-900);
 }
 
-::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--color-surface-alt); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-border-hover); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
 
-/* Section spacing */
-.fjord-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+/* Sections */
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
-
 @media (min-width: 768px) {
-  .fjord-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+  .section { padding-top: 7rem; padding-bottom: 7rem; }
 }
 
-.fjord-heading {
+/* Headings — Fjordkraft style: bold, tight tracking */
+.heading-xl {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+.heading-lg {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+.heading-md {
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
-/* Card — warm shadow, not cold */
+/* Fjord card — clean, minimal shadow */
 .fjord-card {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(15,32,41,0.04), 0 4px 16px rgba(15,32,41,0.06);
+  border-radius: 12px;
   border: 1px solid var(--color-border);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(13,32,56,0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-
 .fjord-card:hover {
-  box-shadow: 0 4px 12px rgba(15,32,41,0.08), 0 16px 40px rgba(15,32,41,0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(13,32,56,0.1);
+  transform: translateY(-1px);
 }
 
-/* Primary button — Navy */
-.fjord-btn-primary {
-  background: var(--color-brand-700);
+/* Primary CTA — Fjordkraft green */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-green-600);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--color-green-700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,95,46,0.3);
+}
+
+/* Secondary — navy outline */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   color: white;
   font-weight: 600;
-  padding: 0.875rem 1.75rem;
-  border-radius: 12px;
-  transition: all 0.2s ease;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.35);
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
 }
 
-.fjord-btn-primary:hover {
-  background: var(--color-brand-800);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(15,45,66,0.3);
-}
-
-/* CTA button — Amber/Gold — Premium, distinctive */
-.fjord-btn-cta {
-  background: var(--color-amber-600);
+/* Loan card CTA — green */
+.btn-loan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-green-600);
   color: white;
   font-weight: 700;
-  padding: 0.875rem 1.75rem;
-  border-radius: 12px;
-  transition: all 0.2s ease;
-  letter-spacing: 0.01em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: background 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-loan:hover {
+  background: var(--color-green-700);
+  box-shadow: 0 4px 12px rgba(0,95,46,0.25);
 }
 
-.fjord-btn-cta:hover {
-  background: var(--color-amber-700);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(201,138,8,0.35);
-}
-
-/* Green CTA for loan cards */
-.fjord-btn-green {
-  background: var(--color-cta-600);
+/* Secondary dark */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-navy-800);
   color: white;
-  font-weight: 700;
-  padding: 0.875rem 1.75rem;
-  border-radius: 12px;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: background 0.15s;
+  text-decoration: none;
 }
+.btn-dark:hover { background: var(--color-navy-900); }
 
-.fjord-btn-green:hover {
-  background: var(--color-cta-700);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(26,117,69,0.3);
-}
+/* Legacy aliases for compat */
+.fjord-btn-cta { @apply btn-primary; }
+.fjord-btn-primary { @apply btn-dark; }
+.fjord-btn-green { @apply btn-loan; }
+.fjord-heading { @apply heading-md; }
+.fjord-section { @apply section; }

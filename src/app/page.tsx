@@ -38,48 +38,37 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }])) }} />
 
-      {/* Hero — Warm Nordic, editorial feel */}
-      <section style={{background: 'linear-gradient(160deg, #f0f4f9 0%, #fdfcfb 60%)'}}>
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 pt-14 sm:pt-22 pb-14 sm:pb-18">
-          <div className="text-center max-w-2xl mx-auto">
-            {/* Trust pill */}
-            <div className="inline-flex items-center gap-2 bg-white border border-border rounded-full px-4 py-2 mb-8 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-cta-500 flex-shrink-0"></span>
-              <span className="text-[13px] font-medium text-text-secondary">Uavhengig • Oppdatert mars 2026 • 20+ banker</span>
-            </div>
-
-            <h1 className="fjord-heading text-[38px] sm:text-[52px] text-text-primary mb-5">
-              Finn billigste<br className="hidden sm:block" /> forbrukslån i Norge
-            </h1>
-            <p className="text-[18px] text-text-secondary leading-relaxed mb-10 max-w-xl mx-auto">
-              Sammenlign renter og vilkår fra 20+ norske banker. Gratis, uavhengig og uten påvirkning på kredittscore.
+      {/* Hero — Fjordkraft style: dark navy, big type, left-aligned */}
+      <section style={{background: '#122d4e'}}>
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-16 sm:pt-24 pb-14 sm:pb-20">
+          <div className="max-w-2xl">
+            {/* Eyebrow — simple, no pill */}
+            <p className="text-[13px] font-semibold uppercase tracking-widest mb-6" style={{color: 'rgba(255,255,255,0.55)', letterSpacing: '0.12em'}}>
+              Uavhengig sammenligning · Mars 2026
             </p>
 
-            {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="#topp-lan" className="fjord-btn-cta w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[16px]">
+            <h1 className="heading-xl text-[42px] sm:text-[60px] lg:text-[68px] text-white mb-6">
+              Finn billigste<br />forbrukslån
+            </h1>
+            <p className="text-[18px] sm:text-[20px] leading-relaxed mb-10" style={{color: 'rgba(255,255,255,0.75)', maxWidth: '520px'}}>
+              Vi sammenligner over 20 norske banker og långivere — slik at du alltid får det beste tilbudet.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="#topp-lan" className="btn-primary text-[16px] px-8 py-4">
                 Se beste lån nå
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </Link>
-              <Link href="#kalkulator" className="fjord-btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[16px]">
+              <Link href="#kalkulator" className="btn-secondary text-[16px] px-8 py-4">
                 Beregn månedskostnad
               </Link>
             </div>
 
-            {/* Social proof row — human, not stats */}
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-12 pt-8 border-t border-border">
-              <div className="flex items-center gap-2">
-                <span className="text-[20px]">🏦</span>
-                <span className="text-[14px] text-text-secondary"><strong className="text-text-primary font-semibold">20+</strong> banker sammenlignet</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[20px]">⚡</span>
-                <span className="text-[14px] text-text-secondary">Svar på <strong className="text-text-primary font-semibold">2 min</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-[20px]">🔒</span>
-                <span className="text-[14px] text-text-secondary"><strong className="text-text-primary font-semibold">Gratis</strong> og trygt</span>
-              </div>
+            {/* Trust — minimal, clean */}
+            <div className="flex flex-wrap gap-x-8 gap-y-3 mt-12 pt-8" style={{borderTop: '1px solid rgba(255,255,255,0.15)'}}>
+              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ 20+ banker</span>
+              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ Gratis og uavhengig</span>
+              <span className="text-[14px]" style={{color: 'rgba(255,255,255,0.6)'}}>✓ Ingen påvirkning på kredittscore</span>
             </div>
           </div>
         </div>
@@ -95,8 +84,8 @@ export default function Home() {
         {/* Top 10 */}
         <section id="topp-lan" className="mt-16">
           <div className="mb-8">
-            <h2 className="text-[22px] sm:text-[26px] font-bold text-text-primary">Topp 10 forbrukslån i 2026</h2>
-            <p className="text-[15px] text-text-secondary mt-2">Rangert etter rente, vilkår og kundetilfredshet. Oppdatert mars 2026.</p>
+            <h2 className="heading-lg text-[28px] sm:text-[34px] text-text-primary">Topp 10 forbrukslån i 2026</h2>
+            <p className="text-[16px] text-text-secondary mt-3">Rangert etter rente, vilkår og kundetilfredshet. Oppdatert mars 2026.</p>
           </div>
           <div className="space-y-3">
             {topProviders.map((p, i) => (

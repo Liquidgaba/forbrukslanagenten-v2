@@ -15,36 +15,33 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-border sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
-        <div className="flex items-center justify-between h-[64px]">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style={{background: '#163d58'}}>
-              <span className="text-white font-bold text-[15px]">F</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-[15px] text-text-primary tracking-tight">Forbrukslånagenten</span>
-              <span className="block text-[11px] text-text-muted font-normal -mt-0.5">Uavhengig sammenligning</span>
-            </div>
+      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+        <div className="flex items-center justify-between h-[68px]">
+
+          {/* Logo — wordmark style, no icon */}
+          <Link href="/" className="flex items-center">
+            <span className="font-extrabold text-[18px] tracking-tight" style={{color: '#122d4e', letterSpacing: '-0.02em'}}>
+              Forbrukslånagenten
+            </span>
           </Link>
 
+          {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-[15px] font-medium text-text-secondary hover:text-brand-600 rounded-lg transition-colors"
+                className="px-4 py-2 text-[14px] font-medium text-text-secondary hover:text-text-primary rounded-lg transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/sammenlign"
-              className="ml-2 fjord-btn-cta text-[14px] px-4 py-2"
-            >
-              Finn lån →
+            <Link href="#topp-lan" className="btn-primary ml-4 text-[14px] px-5 py-2.5">
+              Finn beste lån
             </Link>
           </nav>
 
+          {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden p-2 rounded-lg text-text-secondary hover:bg-surface-sunken transition-colors"
@@ -59,6 +56,7 @@ export default function Header() {
           </button>
         </div>
 
+        {/* Mobile menu */}
         {open && (
           <nav className="lg:hidden pb-5 pt-2 space-y-1 border-t border-border">
             {navItems.map(item => (
@@ -66,17 +64,17 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-[16px] font-medium text-text-secondary hover:text-brand-600 hover:bg-surface-sunken rounded-lg transition-colors"
+                className="block px-4 py-3 text-[15px] font-medium text-text-secondary hover:text-text-primary rounded-lg transition-colors"
               >
                 {item.label}
               </Link>
             ))}
             <Link
-              href="/sammenlign"
+              href="#topp-lan"
               onClick={() => setOpen(false)}
-              className="block mx-4 mt-3 fjord-btn-cta text-center text-[16px]"
+              className="btn-primary block mx-0 mt-3 text-center text-[15px]"
             >
-              Finn lån →
+              Finn beste lån
             </Link>
           </nav>
         )}
