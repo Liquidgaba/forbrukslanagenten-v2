@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { organizationSchema } from '@/lib/seo'
 
-const roboto = Roboto({ 
+const poppins = Poppins({ 
   subsets: ['latin'], 
   display: 'swap',
-  weight: ['400', '500', '700', '900']
+  weight: ['400', '500', '600', '700', '800', '900']
 })
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       </head>
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

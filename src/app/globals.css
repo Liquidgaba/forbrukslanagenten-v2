@@ -1,58 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  /* Norwegian Comparison Site — Clean, editorial, lots of air */
-  /* Inspired by Fjordkraft's design language: Roboto, functional, trustworthy */
+  /* Fjordkraft-inspired: Warm cream, dark brown, rounded, friendly */
+  /* Colors extracted from actual Fjordkraft screenshots */
 
-  /* Primary: Norwegian Forest Green — distinctive, not generic */
-  --color-primary-50: #edf7ee;
-  --color-primary-100: #d0ecd2;
-  --color-primary-200: #9dd6a2;
-  --color-primary-300: #64ba6c;
-  --color-primary-400: #3a9e44;
-  --color-primary-500: #1e8328;
-  --color-primary-600: #156820;
-  --color-primary-700: #0e4e18;
-  --color-primary-800: #083610;
-  --color-primary-900: #041f09;
+  /* Accent: Warm orange — for numbers, highlights, key accents */
+  --color-accent-400: #f47c3c;
+  --color-accent-500: #e8560a;
+  --color-accent-600: #c44508;
+  --color-accent-700: #9a3506;
 
-  /* Neutral greys — Fjordkraft uses these extensively */
-  --color-grey-50: #f5f5f5;
-  --color-grey-100: #e8e9e9;
-  --color-grey-200: #dddedf;
-  --color-grey-300: #d1d3d4;
-  --color-grey-400: #a7a9ac;
-  --color-grey-500: #999999;
-  --color-grey-600: #767676;
-  --color-grey-700: #3d3d3f;
-  --color-grey-800: #282828;
-  --color-grey-900: #1a1a1a;
+  /* Primary dark — Fjordkraft's dark brown for buttons & text */
+  --color-dark-700: #3d1a00;
+  --color-dark-800: #2a1000;
+  --color-dark-900: #1a0800;
 
-  /* Accent: warm teal for highlights */
-  --color-teal-400: #00a2b9;
-  --color-teal-500: #007ea4;
-  --color-teal-600: #006080;
+  /* Trust blue — for finance credibility */
+  --color-trust-500: #1a5c8a;
+  --color-trust-600: #124876;
+  --color-trust-700: #0c3560;
 
-  /* Surfaces */
-  --color-surface: #ffffff;
-  --color-surface-raised: #ffffff;
-  --color-surface-muted: #f5f5f5;
-  --color-surface-alt: #e8e9e9;
+  /* Warm surfaces — the HEART of Fjordkraft's feel */
+  --color-surface: #fdf8f4;        /* warm cream — main bg */
+  --color-surface-raised: #ffffff; /* cards */
+  --color-surface-warm: #f5ede4;   /* warm peach tint for cards */
+  --color-surface-peach: #fceee6;  /* lighter peach */
+  --color-surface-hero: #fdf0e6;   /* hero card bg */
 
-  --color-text-primary: #282828;
-  --color-text-secondary: #3d3d3f;
-  --color-text-muted: #767676;
-  --color-text-light: #999999;
+  --color-text-primary: #1a0800;   /* very dark brown */
+  --color-text-secondary: #3d2010; /* medium brown */
+  --color-text-muted: #7a5c45;     /* warm muted */
+  --color-text-light: #b89880;
 
-  --color-border: #dddedf;
-  --color-border-strong: #a7a9ac;
+  --color-border: #e8ddd5;
+  --color-border-hover: #d4c4b8;
 
-  --font-sans: 'Roboto', Helvetica, Arial, sans-serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  /* Rounded like Fjordkraft */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
 }
 
 html {
@@ -62,145 +52,131 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #282828;
+  background-color: #fdf8f4;
+  color: #1a0800;
   line-height: 1.6;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 ::selection {
-  background-color: #d0ecd2;
-  color: #0e4e18;
+  background-color: #fceee6;
+  color: #3d1a00;
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #f5f5f5; }
-::-webkit-scrollbar-thumb { background: #d1d3d4; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #f5ede4; }
+::-webkit-scrollbar-thumb { background: #d4c4b8; border-radius: 4px; }
 
-/* Fjordkraft-style generous section spacing */
+/* Generous section spacing */
 .section {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 @media (min-width: 768px) {
-  .section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+  .section { padding-top: 6rem; padding-bottom: 6rem; }
 }
 
-/* Headings — Roboto bold, tight, editorial */
+/* Bold rounded headings — Fjordkraft energy */
 .heading-xl {
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: -0.025em;
   line-height: 1.1;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 .heading-lg {
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   line-height: 1.15;
 }
 .heading-md {
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   line-height: 1.2;
 }
 
-/* Card — clean, no heavy shadows, Fjordkraft-like */
+/* Card — warm background, rounded, like Fjordkraft */
 .fjord-card {
   background: white;
-  border-radius: 8px;
-  border: 1px solid #dddedf;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  border-radius: 16px;
+  border: 1px solid #e8ddd5;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 .fjord-card:hover {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  border-color: #a7a9ac;
+  box-shadow: 0 8px 32px rgba(61,26,0,0.1);
+  transform: translateY(-2px);
 }
 
-/* Primary CTA — Norwegian green */
+/* Warm tinted card */
+.fjord-card-warm {
+  background: #fceee6;
+  border-radius: 16px;
+  border: 1px solid #e8ddd5;
+}
+
+/* Primary CTA — dark brown pill, like Fjordkraft's "Logg inn" */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #156820;
+  background: #3d1a00;
   color: white;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.875rem 2rem;
-  border-radius: 6px;
-  transition: background 0.15s;
-  font-family: 'Roboto', sans-serif;
+  border-radius: 999px;
+  transition: background 0.15s, transform 0.15s;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   cursor: pointer;
+  letter-spacing: 0.005em;
 }
-.btn-primary:hover { background: #0e4e18; }
+.btn-primary:hover {
+  background: #2a1000;
+  transform: translateY(-1px);
+}
 
-/* Ghost button */
-.btn-ghost {
+/* Outline CTA — like Fjordkraft's "Bestill strøm" */
+.btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #156820;
-  font-weight: 700;
+  color: #3d1a00;
+  font-weight: 600;
   font-size: 1rem;
   padding: 0.875rem 2rem;
-  border-radius: 6px;
-  border: 2px solid #156820;
+  border-radius: 999px;
+  border: 2px solid #3d1a00;
   transition: all 0.15s;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   cursor: pointer;
 }
-.btn-ghost:hover {
-  background: #edf7ee;
+.btn-outline:hover {
+  background: #fceee6;
 }
 
-/* Loan card CTA */
+/* Loan card CTA — orange accent */
 .btn-loan {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #156820;
+  background: #3d1a00;
   color: white;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 999px;
   font-size: 0.9375rem;
   transition: background 0.15s;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
 }
-.btn-loan:hover { background: #0e4e18; }
+.btn-loan:hover { background: #2a1000; }
 
-/* Ghost hero */
-.btn-hero-ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: #282828;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 0.875rem 2rem;
-  border-radius: 6px;
-  border: 1.5px solid #a7a9ac;
-  transition: all 0.15s;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-}
-.btn-hero-ghost:hover {
-  border-color: #3d3d3f;
-  color: #1a1a1a;
-}
-
-/* Legacy compat */
+/* Legacy aliases */
 .fjord-btn-cta { @apply btn-primary; }
-.fjord-btn-primary { @apply btn-ghost; }
+.fjord-btn-primary { @apply btn-outline; }
 .fjord-btn-green { @apply btn-loan; }
 .fjord-heading { @apply heading-md; }
 .fjord-section { @apply section; }

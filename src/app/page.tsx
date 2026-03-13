@@ -38,54 +38,60 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }])) }} />
 
-      {/* Hero — Fjordkraft-inspired: light, airy, left-aligned, editorial */}
-      <section style={{background: '#f5f5f5', borderBottom: '1px solid #e8e9e9'}}>
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-14 sm:pt-20 pb-12 sm:pb-16">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Left: headline */}
-            <div>
-              <p className="text-[13px] font-medium uppercase mb-5" style={{color: '#767676', letterSpacing: '0.1em'}}>
-                Uavhengig · Oppdatert mars 2026 · 20+ banker
-              </p>
-              <h1 className="heading-xl text-[40px] sm:text-[54px] lg:text-[62px] mb-5" style={{color: '#282828'}}>
-                Finn billigste<br />forbrukslån<br />
-                <span style={{color: '#156820'}}>i Norge</span>
-              </h1>
-              <p className="text-[17px] sm:text-[19px] leading-relaxed mb-8" style={{color: '#3d3d3f', maxWidth: '480px'}}>
-                Vi sammenligner renter og vilkår fra alle store norske banker. Du får det beste tilbudet — gratis og uten innvirkning på kredittscore.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="#topp-lan" className="btn-primary text-[16px] px-7 py-4">
-                  Se beste lån nå
-                </Link>
-                <Link href="#kalkulator" className="btn-hero-ghost text-[16px] px-7 py-4">
-                  Beregn månedskostnad
-                </Link>
+      {/* Hero — Fjordkraft-style: warm cream, two-column, rounded card */}
+      <section style={{background: '#fdf8f4', paddingTop: '2rem', paddingBottom: '2.5rem'}}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          {/* Hero card — warm peach background, rounded, like Fjordkraft */}
+          <div className="rounded-2xl overflow-hidden" style={{background: '#fdf0e6', border: '1px solid #e8ddd5'}}>
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Left: text */}
+              <div className="p-8 sm:p-12 lg:p-14 flex flex-col justify-center">
+                <p className="text-[13px] font-semibold uppercase mb-5" style={{color: '#7a5c45', letterSpacing: '0.08em'}}>
+                  Uavhengig sammenligning · Mars 2026
+                </p>
+                <h1 className="heading-xl text-[38px] sm:text-[50px] mb-5" style={{color: '#1a0800'}}>
+                  Finn billigste<br />forbrukslån
+                </h1>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    'Sammenlign 20+ norske banker',
+                    'Ingen påvirkning på kredittscore',
+                    'Gratis og helt uavhengig',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{background: '#e8560a'}}>
+                        <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="text-[15px] font-medium" style={{color: '#3d2010'}}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="#topp-lan" className="btn-primary text-[15px] px-7 py-3.5">
+                    Se beste lån nå
+                  </Link>
+                  <Link href="#kalkulator" className="btn-outline text-[15px] px-7 py-3.5">
+                    Beregn kostnad
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* Right: clean trust facts */}
-            <div className="hidden lg:block">
-              <div className="space-y-4">
+              {/* Right: stats panel */}
+              <div className="hidden lg:flex flex-col justify-center p-14 gap-5" style={{background: '#fceee6'}}>
                 {[
-                  { num: '20+', label: 'Norske banker og långivere sammenlignet' },
-                  { num: '100%', label: 'Gratis og uavhengig — vi tjener kun på godkjente lån' },
-                  { num: '0 kr', label: 'Kostnad for deg å sammenligne og søke' },
+                  { num: '5,45 %', label: 'Laveste rente vi har funnet' },
+                  { num: '600 000 kr', label: 'Maks lånebeløp uten sikkerhet' },
+                  { num: '~2 min', label: 'Og du har svar fra banken' },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-5 bg-white rounded-lg p-5" style={{border: '1px solid #e8e9e9'}}>
-                    <div className="text-[32px] font-black flex-shrink-0" style={{color: '#156820', fontFamily: 'Roboto, sans-serif'}}>{item.num}</div>
-                    <div className="text-[15px]" style={{color: '#3d3d3f'}}>{item.label}</div>
+                  <div key={i} className="bg-white rounded-xl p-5" style={{border: '1px solid #e8ddd5'}}>
+                    <div className="text-[30px] font-black mb-1" style={{color: '#e8560a'}}>{item.num}</div>
+                    <div className="text-[14px] font-medium" style={{color: '#7a5c45'}}>{item.label}</div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Mobile trust */}
-          <div className="lg:hidden flex flex-wrap gap-5 mt-8 pt-6" style={{borderTop: '1px solid #d1d3d4'}}>
-            <span className="text-[14px]" style={{color: '#767676'}}>✓ 20+ banker</span>
-            <span className="text-[14px]" style={{color: '#767676'}}>✓ Gratis og uavhengig</span>
-            <span className="text-[14px]" style={{color: '#767676'}}>✓ Ingen påvirkning på kredittscore</span>
           </div>
         </div>
       </section>
