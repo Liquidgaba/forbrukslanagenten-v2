@@ -8,7 +8,7 @@ interface LoanCardProps {
 }
 
 export default function LoanCard({ provider, rank, showDetails = true }: LoanCardProps) {
-  const trackingUrl = getTrackingUrl(provider.adId)
+  const trackingUrl = getTrackingUrl(provider.adId, provider.url)
 
   return (
     <article className="group bg-white rounded-xl border border-border hover:border-brand-200 hover:shadow-[0_2px_16px_rgba(0,107,207,0.08)] transition-all duration-200">

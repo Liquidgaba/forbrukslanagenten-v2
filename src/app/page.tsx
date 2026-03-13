@@ -38,53 +38,49 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }])) }} />
 
-      {/* Hero — clean, Nordic */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.1),transparent_70%)]" />
-        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-[13px] text-white/90 font-medium mb-6 border border-white/10">
-              <span className="w-1.5 h-1.5 bg-mint-400 rounded-full animate-pulse" />
-              Oppdatert mars 2026
+      {/* Hero — light, spacious, human */}
+      <section className="bg-white border-b border-border">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 pb-12 sm:pb-16">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-mint-50 text-[13px] text-mint-700 font-medium mb-5 border border-mint-200">
+                <span className="w-1.5 h-1.5 bg-mint-500 rounded-full" />
+                Oppdatert mars 2026
+              </div>
+              <h1 className="text-[30px] sm:text-[44px] font-bold text-text-primary leading-[1.15] tracking-tight mb-5">
+                Sammenlign forbrukslån<br className="hidden sm:block" /> og spar tusenvis
+              </h1>
+              <p className="text-[16px] sm:text-[18px] text-text-secondary leading-relaxed mb-8 max-w-lg">
+                Vi sammenligner renter fra 20+ banker — slik at du slipper. Finn laveste rente, beregn hva lånet koster, og søk direkte.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="#topp-lan" className="inline-flex items-center px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl text-[15px] transition-colors shadow-sm">
+                  Se beste lån →
+                </Link>
+                <Link href="#kalkulator" className="inline-flex items-center px-6 py-3.5 bg-surface-sunken hover:bg-gray-100 text-text-primary font-semibold rounded-xl text-[15px] transition-colors border border-border">
+                  Beregn lånet ditt
+                </Link>
+              </div>
             </div>
-            <h1 className="text-[32px] sm:text-[48px] font-bold text-white leading-[1.1] tracking-tight mb-5">
-              Finn det beste<br />forbrukslånet for deg
-            </h1>
-            <p className="text-[17px] sm:text-[19px] text-white/75 leading-relaxed mb-8 max-w-lg">
-              Sammenlign renter fra 20+ banker, beregn hva lånet faktisk koster, og søk direkte — alt på ett sted.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="#topp-lan" className="inline-flex items-center px-6 py-3.5 bg-white text-brand-700 font-semibold rounded-xl text-[15px] hover:bg-white/90 transition-colors shadow-lg shadow-brand-900/20">
-                Se beste lån
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-              </Link>
-              <Link href="#kalkulator" className="inline-flex items-center px-6 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl text-[15px] hover:bg-white/20 transition-colors border border-white/15">
-                Beregn lånet ditt
-              </Link>
+
+            {/* Right side — quick stats cards */}
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { value: '20+', label: 'Banker sammenlignet', icon: '🏦' },
+                { value: 'fra 5,45%', label: 'Laveste effektive rente', icon: '📉' },
+                { value: '600 000 kr', label: 'Maks uten sikkerhet', icon: '💰' },
+                { value: '~2 min', label: 'Søknadstid', icon: '⚡' },
+              ].map(s => (
+                <div key={s.label} className="bg-surface-sunken rounded-xl p-4 sm:p-5 border border-border">
+                  <span className="text-[20px]">{s.icon}</span>
+                  <div className="text-[20px] font-bold text-text-primary mt-2">{s.value}</div>
+                  <div className="text-[13px] text-text-muted mt-0.5">{s.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Trust bar */}
-      <div className="bg-white border-b border-border">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {[
-              { value: '20+', label: 'Banker sammenlignet' },
-              { value: 'fra 5,45%', label: 'Laveste rente' },
-              { value: '600 000', label: 'Maks uten sikkerhet' },
-              { value: '~2 min', label: 'Søknadstid' },
-            ].map(s => (
-              <div key={s.label} className="text-center sm:text-left">
-                <div className="text-[20px] font-bold text-text-primary">{s.value}</div>
-                <div className="text-[13px] text-text-muted mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="py-10">

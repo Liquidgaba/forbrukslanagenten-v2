@@ -21,11 +21,16 @@ export interface LoanProvider {
   rating: number // 1-5 editorial rating
 }
 
-// Channel ID from Adtraction - set in env or default
-const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || '1323127498'
+// Channel ID from Adtraction - UPDATE THIS when forbrukslånagenten.no is registered
+const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || ''
 
-export function getTrackingUrl(adId: number): string {
-  return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
+export function getTrackingUrl(adId: number, fallbackUrl?: string): string {
+  // If we have a channel ID, use Adtraction tracking
+  if (CHANNEL_ID) {
+    return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
+  }
+  // Otherwise link directly to the bank (until we're approved)
+  return fallbackUrl || '#'
 }
 
 export const loanProviders: LoanProvider[] = [
