@@ -29,9 +29,9 @@ export default function RefinansieringMedBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Med betalingsanmerkning' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Refinansiering med betalingsanmerkning</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Refinansiering med betalingsanmerkning</h1>
 
-      <p className="text-lg text-gray-600 mb-8">
+      <p className="text-lg text-text-secondary mb-8">
         Du sitter med dyr gjeld spredd utover kredittkort, smålån og kanskje en inkassosak eller to. Renten spiser opp alt. Refinansiering er veien ut — og ja, det er mulig selv med anmerkning.
       </p>
 
@@ -52,17 +52,17 @@ export default function RefinansieringMedBetalingsanmerkning() {
         </ul>
 
         <h2>Eksempel: Slik kan det se ut</h2>
-        <div className="bg-gray-50 rounded-lg p-5 not-prose mb-4">
-          <h3 className="font-bold text-gray-900 mb-3">Før refinansiering:</h3>
-          <ul className="space-y-1 text-sm text-gray-700">
+        <div className="bg-surface-muted rounded-lg p-5 not-prose mb-4">
+          <h3 className="font-bold text-text-primary mb-3">Før refinansiering:</h3>
+          <ul className="space-y-1 text-sm text-text-secondary">
             <li>Kredittkort 1: 80 000 kr til 21,9% rente = 17 520 kr/år i renter</li>
             <li>Kredittkort 2: 45 000 kr til 23,4% rente = 10 530 kr/år i renter</li>
             <li>Forbrukslån: 150 000 kr til 16% rente = 24 000 kr/år i renter</li>
             <li>Inkassokrav: 25 000 kr + forsinkelsesrente</li>
             <li><strong>Totalt: 300 000 kr, ~52 000 kr/år i renter</strong></li>
           </ul>
-          <h3 className="font-bold text-gray-900 mb-3 mt-4">Etter refinansiering med sikkerhet:</h3>
-          <ul className="space-y-1 text-sm text-gray-700">
+          <h3 className="font-bold text-text-primary mb-3 mt-4">Etter refinansiering med sikkerhet:</h3>
+          <ul className="space-y-1 text-sm text-text-secondary">
             <li>Nytt lån: 300 000 kr til 10% rente = 30 000 kr/år i renter</li>
             <li><strong>Besparelse: 22 000 kr per år</strong></li>
           </ul>
@@ -81,7 +81,7 @@ export default function RefinansieringMedBetalingsanmerkning() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Sammenlign refinansiering</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Sammenlign refinansiering</h2>
         <div className="space-y-4">
           {providers.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

@@ -26,12 +26,12 @@ const linkGroups = {
 
 export default function InternalLinks({ exclude, groups = ['forbrukslan', 'betalingsanmerkning', 'refinansiering'] }: { exclude?: string; groups?: (keyof typeof linkGroups)[] }) {
   return (
-    <section className="mt-12 bg-gray-50 rounded-xl p-6">
-      <h2 className="text-lg font-bold text-gray-900 mb-4">Relaterte sider</h2>
+    <section className="mt-12 bg-surface-muted rounded-xl p-6">
+      <h2 className="text-lg font-bold text-text-primary mb-4">Relaterte sider</h2>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {groups.map(group => (
           <div key={group}>
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{group === 'betalingsanmerkning' ? 'Betalingsanmerkning' : group === 'refinansiering' ? 'Refinansiering' : 'Forbrukslån'}</h3>
+            <h3 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-2">{group === 'betalingsanmerkning' ? 'Betalingsanmerkning' : group === 'refinansiering' ? 'Refinansiering' : 'Forbrukslån'}</h3>
             <ul className="space-y-1">
               {linkGroups[group].filter(l => l.href !== exclude).map(l => (
                 <li key={l.href}><Link href={l.href} className="text-sm text-primary-600 hover:text-primary-800 hover:underline">{l.label}</Link></li>

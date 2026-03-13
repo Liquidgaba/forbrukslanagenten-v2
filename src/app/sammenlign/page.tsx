@@ -19,8 +19,8 @@ export default function Sammenlign() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <Breadcrumb items={[{ name: 'Sammenlign forbrukslån' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Sammenlign forbrukslån</h1>
-      <p className="text-lg text-gray-600 mb-8">Alle banker og lånemeglere i én oversikt. Sortert etter laveste rente. Klikk &ldquo;Søk nå&rdquo; for å gå direkte til søknadsskjemaet.</p>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Sammenlign forbrukslån</h1>
+      <p className="text-lg text-text-secondary mb-8">Alle banker og lånemeglere i én oversikt. Sortert etter laveste rente. Klikk &ldquo;Søk nå&rdquo; for å gå direkte til søknadsskjemaet.</p>
 
       <div className="mb-8"><Calculator /></div>
 

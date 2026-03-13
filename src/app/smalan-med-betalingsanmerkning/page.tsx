@@ -29,9 +29,9 @@ export default function SmalanMedBetalingsanmerkning() {
 
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Smålån med betalingsanmerkning' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Smålån med betalingsanmerkning</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Smålån med betalingsanmerkning</h1>
       
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-lg text-text-secondary mb-8 leading-relaxed">
         Du trenger penger raskt, men har en betalingsanmerkning hengende over deg. Vi skjønner frustrasjonen. Her er det du trenger å vite — uten sukkerpynt.
       </p>
 
@@ -86,7 +86,7 @@ export default function SmalanMedBetalingsanmerkning() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Aktører som kan hjelpe</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Aktører som kan hjelpe</h2>
         <div className="space-y-4">
           {relevantProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

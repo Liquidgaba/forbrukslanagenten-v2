@@ -28,8 +28,8 @@ export default function BesteForbrukslan() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Beste forbrukslån' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Beste forbrukslån i 2026 — Topp 10</h1>
-      <p className="text-lg text-gray-600 mb-8">Rangert etter rente, vilkår, fleksibilitet og vår redaksjonelle vurdering. Vi oppdaterer listen hver måned.</p>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Beste forbrukslån i 2026 — Topp 10</h1>
+      <p className="text-lg text-text-secondary mb-8">Rangert etter rente, vilkår, fleksibilitet og vår redaksjonelle vurdering. Vi oppdaterer listen hver måned.</p>
 
       <ComparisonTable providers={topProviders} title="Sammenligning — Alle långivere" />
 
@@ -47,7 +47,7 @@ export default function BesteForbrukslan() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Detaljert oversikt</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Detaljert oversikt</h2>
         <div className="space-y-4">
           {topProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

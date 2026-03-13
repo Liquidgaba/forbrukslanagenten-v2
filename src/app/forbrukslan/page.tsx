@@ -31,8 +31,8 @@ export default function Forbrukslan() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Forbrukslån' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Forbrukslån i Norge — Den komplette guiden for 2026</h1>
-      <p className="text-lg text-gray-600 mb-8">Alt du trenger å vite om forbrukslån. Fra hvordan det fungerer, til hva det koster, til hvilke banker som gir best vilkår. Rett på sak, uten tåkeprat.</p>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Forbrukslån i Norge — Den komplette guiden for 2026</h1>
+      <p className="text-lg text-text-secondary mb-8">Alt du trenger å vite om forbrukslån. Fra hvordan det fungerer, til hva det koster, til hvilke banker som gir best vilkår. Rett på sak, uten tåkeprat.</p>
 
       <Calculator />
 
@@ -115,7 +115,7 @@ export default function Forbrukslan() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Topp 10 forbrukslån mars 2026</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Topp 10 forbrukslån mars 2026</h2>
         <div className="space-y-4">
           {topProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

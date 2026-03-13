@@ -29,9 +29,9 @@ export default function LanEtterSlettetBetalingsanmerkning() {
 
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Etter slettet anmerkning' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån etter slettet betalingsanmerkning</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Lån etter slettet betalingsanmerkning</h1>
 
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-lg text-text-secondary mb-8 leading-relaxed">
         Gratulerer! Anmerkningen er borte. Det er en milepæl. Nå handler det om å gjøre de smarte valgene fremover — og det starter med å forstå hva bankene faktisk ser.
       </p>
 
@@ -80,8 +80,8 @@ export default function LanEtterSlettetBetalingsanmerkning() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Anbefalte långivere etter slettet anmerkning</h2>
-        <p className="text-gray-500 mb-4">Disse bankene og meglerne er gode utgangspunkt for å søke lån etter at anmerkningen er fjernet.</p>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Anbefalte långivere etter slettet anmerkning</h2>
+        <p className="text-text-muted mb-4">Disse bankene og meglerne er gode utgangspunkt for å søke lån etter at anmerkningen er fjernet.</p>
         <div className="space-y-4">
           {topProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

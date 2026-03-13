@@ -31,9 +31,9 @@ export default function RefinansieringUtenSikkerhetMedBetalingsanmerkning() {
 
       <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Uten sikkerhet med betalingsanmerkning' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Refinansiering uten sikkerhet med betalingsanmerkning</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Refinansiering uten sikkerhet med betalingsanmerkning</h1>
 
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-lg text-text-secondary mb-8 leading-relaxed">
         Du vil samle dyr gjeld til ett lån med lavere rente. Men du har en anmerkning og eier ikke bolig. Hva nå? Vi gir deg det ærlige bildet.
       </p>
 
@@ -93,7 +93,7 @@ export default function RefinansieringUtenSikkerhetMedBetalingsanmerkning() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Långivere for refinansiering (med og uten sikkerhet)</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Långivere for refinansiering (med og uten sikkerhet)</h2>
         <div className="space-y-4">
           {relevantProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

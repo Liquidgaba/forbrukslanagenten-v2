@@ -29,9 +29,9 @@ export default function GarantertLanMedBetalingsanmerkning() {
 
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Garantert lån' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">&ldquo;Garantert lån med betalingsanmerkning&rdquo; — Finnes det?</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">&ldquo;Garantert lån med betalingsanmerkning&rdquo; — Finnes det?</h1>
       
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-lg text-text-secondary mb-8 leading-relaxed">
         Kort svar: nei. Det finnes ikke noe slikt som garantert lån. Men det betyr ikke at du er helt uten muligheter. La oss forklare.
       </p>
 
@@ -89,8 +89,8 @@ export default function GarantertLanMedBetalingsanmerkning() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Seriøse aktører som vurderer søknader med anmerkninger</h2>
-        <p className="text-gray-500 mb-4">Disse kan ikke garantere lån, men de vil faktisk se på søknaden din.</p>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Seriøse aktører som vurderer søknader med anmerkninger</h2>
+        <p className="text-text-muted mb-4">Disse kan ikke garantere lån, men de vil faktisk se på søknaden din.</p>
         <div className="space-y-4">
           {remarkProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

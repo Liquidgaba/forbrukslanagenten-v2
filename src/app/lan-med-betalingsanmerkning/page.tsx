@@ -32,9 +32,9 @@ export default function LanMedBetalingsanmerkning() {
 
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån med betalingsanmerkning i 2026</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Lån med betalingsanmerkning i 2026</h1>
       
-      <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+      <p className="text-lg text-text-secondary mb-8 leading-relaxed">
         Du har fått en betalingsanmerkning. Det føles som en dør som smeller igjen. Men vet du hva? Det finnes fortsatt muligheter — du må bare vite hvor du skal lete.
       </p>
 
@@ -66,8 +66,8 @@ export default function LanMedBetalingsanmerkning() {
 
       {/* Provider list */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Långivere som vurderer betalingsanmerkninger</h2>
-        <p className="text-gray-500 mb-4">Disse aktørene har bekreftet at de vurderer søknader fra personer med betalingsanmerkninger.</p>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Långivere som vurderer betalingsanmerkninger</h2>
+        <p className="text-text-muted mb-4">Disse aktørene har bekreftet at de vurderer søknader fra personer med betalingsanmerkninger.</p>
         <div className="space-y-4">
           {remarkProviders.map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />

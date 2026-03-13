@@ -24,8 +24,8 @@ export default function LanMedInkasso() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Lån med inkasso' }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån med inkasso</h1>
-      <p className="text-lg text-gray-600 mb-8">Du har fått brev fra et inkassobyrå. Det er ubehagelig, men det trenger ikke bety at alle dører er stengt. Her forklarer vi hva som gjelder.</p>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-4">Lån med inkasso</h1>
+      <p className="text-lg text-text-secondary mb-8">Du har fått brev fra et inkassobyrå. Det er ubehagelig, men det trenger ikke bety at alle dører er stengt. Her forklarer vi hva som gjelder.</p>
 
       <div className="prose prose-lg max-w-none mb-8">
         <h2>Inkasso vs. betalingsanmerkning — det er en viktig forskjell</h2>
@@ -48,7 +48,7 @@ export default function LanMedInkasso() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Aktører som kan hjelpe</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">Aktører som kan hjelpe</h2>
         <div className="space-y-4">
           {getProvidersForRemarks().map((p, i) => (
             <LoanCard key={p.id} provider={p} rank={i + 1} />
