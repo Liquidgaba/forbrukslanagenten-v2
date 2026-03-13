@@ -31,11 +31,11 @@ export default function RefinansieringInkassogjeld() {
         Inkassogjeld vokser raskt på grunn av forsinkelsesrenter, salærer og gebyrer. Ved å refinansiere med sikkerhet i bolig kan du stoppe kostnadsspiralen og samle alt til én overkommelig betaling.
       </p>
 
-      <div className="bg-warm-50 border border-warm-200 rounded-xl p-5 sm:p-6 mb-10">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-6 mb-10">
         <h2 className="text-[16px] font-semibold text-text-primary mb-2">📊 Eksempel: Spar på å refinansiere</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="text-[14px] text-text-secondary">
-            <strong className="text-warm-800">Før (inkassogjeld):</strong><br />
+            <strong className="text-amber-800">Før (inkassogjeld):</strong><br />
             200 000 kr i inkasso × ~15% forsinkelsesrente + salærer<br />
             = ca. 5 500 kr/mnd (og voksende)
           </div>

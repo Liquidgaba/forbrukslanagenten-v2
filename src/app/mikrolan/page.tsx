@@ -30,7 +30,7 @@ export default function Mikrolan() {
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Et mikrolån gir deg tilgang til små beløp raskt — typisk mellom 1 000 og 30 000 kr. Perfekt for uventede regninger, men vær oppmerksom på at rentene ofte er høyere enn for vanlige forbrukslån.
       </p>
-      <div className="bg-warm-50 border border-warm-200 rounded-xl p-5 sm:p-6 mb-10">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-6 mb-10">
         <h2 className="text-[16px] font-semibold text-text-primary mb-2">⚠️ Før du tar mikrolån</h2>
         <p className="text-[14px] text-text-secondary leading-relaxed">
           Mikrolån bør kun brukes til akutte behov. Effektiv rente kan være svært høy — opptil 30-40% for de minste beløpene. Sjekk alltid om du kan løse det på andre måter først (bruke bufferkonto, be om betalingsutsettelse, etc.).

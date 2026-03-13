@@ -38,68 +38,47 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }])) }} />
 
-      {/* Hero — warm, trustworthy, Scandinavian editorial */}
-      <section className="hero-texture bg-gradient-to-b from-surface-warm to-surface border-b border-border">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 pb-12 sm:pb-16">
-          {/* Trust bar */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-8 text-[13px] text-text-muted">
-            <span className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-mint-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              Uavhengig sammenligning
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-mint-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              Oppdatert mars 2026
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-mint-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              20+ banker
-            </span>
-          </div>
-
-          <div className="text-center max-w-3xl mx-auto">
-            {/* Editorial eyebrow */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-900 text-white/90 text-[12px] font-medium mb-6 tracking-wide uppercase">
-              Norges største lånesammenligning
+      {/* Hero — Warm Nordic, editorial feel */}
+      <section style={{background: 'linear-gradient(160deg, #f0f4f9 0%, #fdfcfb 60%)'}}>
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 pt-14 sm:pt-22 pb-14 sm:pb-18">
+          <div className="text-center max-w-2xl mx-auto">
+            {/* Trust pill */}
+            <div className="inline-flex items-center gap-2 bg-white border border-border rounded-full px-4 py-2 mb-8 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-cta-500 flex-shrink-0"></span>
+              <span className="text-[13px] font-medium text-text-secondary">Uavhengig • Oppdatert mars 2026 • 20+ banker</span>
             </div>
-            
-            <h1 className="editorial-heading text-[36px] sm:text-[52px] sm:text-[58px] font-bold text-brand-900 leading-[1.05] tracking-tight mb-6">
-              Finn det billigste<br />
-              <span className="text-accent-600">forbrukslånet</span>
+
+            <h1 className="fjord-heading text-[38px] sm:text-[52px] text-text-primary mb-5">
+              Finn billigste<br className="hidden sm:block" /> forbrukslån i Norge
             </h1>
-            <p className="text-[18px] sm:text-[20px] text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto">
-              Vi sammenligner renter fra over 20 banker — så du slipper å gjøre det selv. 
-              Finn laveste rente, beregn kostnaden, og søk direkte.
+            <p className="text-[18px] text-text-secondary leading-relaxed mb-10 max-w-xl mx-auto">
+              Sammenlign renter og vilkår fra 20+ norske banker. Gratis, uavhengig og uten påvirkning på kredittscore.
             </p>
 
-            {/* CTA buttons — warm accent */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
-              <Link href="#topp-lan" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl text-[16px] transition-all shadow-lg shadow-accent-500/25 hover:shadow-xl hover:-translate-y-0.5">
-                Se dagens beste lån
-                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" /></svg>
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="#topp-lan" className="fjord-btn-cta w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[16px]">
+                Se beste lån nå
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </Link>
-              <Link href="#kalkulator" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 bg-white hover:bg-surface-warm text-brand-800 font-medium rounded-xl text-[16px] transition-colors border-2 border-brand-200 hover:border-brand-300">
-                <svg className="w-5 h-5 mr-2 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+              <Link href="#kalkulator" className="fjord-btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-[16px]">
                 Beregn månedskostnad
               </Link>
             </div>
 
-            {/* Key stats — cleaner, warmer */}
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-[15px] text-text-secondary">
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-[28px]">📉</span>
-                <span className="text-text-primary font-semibold">5,45%</span>
-                <span className="text-[13px] text-text-muted">laveste rente</span>
+            {/* Social proof row — human, not stats */}
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-12 pt-8 border-t border-border">
+              <div className="flex items-center gap-2">
+                <span className="text-[20px]">🏦</span>
+                <span className="text-[14px] text-text-secondary"><strong className="text-text-primary font-semibold">20+</strong> banker sammenlignet</span>
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-[28px]">💰</span>
-                <span className="text-text-primary font-semibold">600 000 kr</span>
-                <span className="text-[13px] text-text-muted">maks uten sikkerhet</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[20px]">⚡</span>
+                <span className="text-[14px] text-text-secondary">Svar på <strong className="text-text-primary font-semibold">2 min</strong></span>
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-[28px]">⚡</span>
-                <span className="text-text-primary font-semibold">~2 min</span>
-                <span className="text-[13px] text-text-muted">svar fra bankene</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[20px]">🔒</span>
+                <span className="text-[14px] text-text-secondary"><strong className="text-text-primary font-semibold">Gratis</strong> og trygt</span>
               </div>
             </div>
           </div>
@@ -127,21 +106,19 @@ export default function Home() {
         </section>
 
         {/* Payment remarks CTA */}
-        <section className="mt-16 bg-warm-50 border border-warm-200 rounded-xl p-6 sm:p-8">
+        <section className="mt-16 rounded-2xl p-6 sm:p-8 overflow-hidden" style={{background: 'linear-gradient(135deg, #f0f4f9 0%, #e8eef5 100%)', border: '1px solid #d9e5f0'}}>
           <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-            <div className="flex-shrink-0 w-12 h-12 bg-warm-100 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-warm-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
+            <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[24px]">
+              🔓
             </div>
             <div className="flex-grow">
               <h2 className="text-[18px] font-bold text-text-primary mb-1">Har du betalingsanmerkning?</h2>
               <p className="text-[14px] text-text-secondary leading-relaxed">
-                Det finnes faktisk muligheter — selv med anmerkninger på kredittsjekken. 
+                Det finnes muligheter — selv med anmerkninger på kredittsjekken. 
                 Noen långivere spesialiserer seg på dette, spesielt med sikkerhet i bolig.
               </p>
             </div>
-            <Link href="/lan-med-betalingsanmerkning" className="inline-flex items-center px-5 py-2.5 bg-warm-600 hover:bg-warm-700 text-white font-semibold rounded-lg text-[14px] transition-colors whitespace-nowrap flex-shrink-0">
+            <Link href="/lan-med-betalingsanmerkning" className="fjord-btn-primary inline-flex items-center gap-2 text-[14px] whitespace-nowrap flex-shrink-0">
               Les mer →
             </Link>
           </div>

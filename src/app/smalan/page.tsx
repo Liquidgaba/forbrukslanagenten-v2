@@ -34,7 +34,7 @@ export default function Smalan() {
         Vi har sammenlignet de beste tilbudene for deg.
       </p>
 
-      <div className="bg-warm-50 border border-warm-200 rounded-xl p-5 sm:p-6 mb-10">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-6 mb-10">
         <h2 className="text-[16px] font-semibold text-text-primary mb-2">⚠️ Tenk deg om før du låner</h2>
         <p className="text-[14px] text-text-secondary leading-relaxed">
           Smålån har ofte høyere effektiv rente enn vanlige forbrukslån. Trenger du mer enn 50 000 kr? 

@@ -38,13 +38,13 @@ export default function SamleForbrukslan() {
       <div className="bg-white border border-border rounded-xl p-5 sm:p-6 mb-10">
         <h2 className="text-[16px] font-semibold text-text-primary mb-4">📊 Eksempel: Samle 300 000 kr i gjeld</h2>
         <div className="grid sm:grid-cols-2 gap-4">
-          <div className="bg-warm-50 rounded-lg p-4">
-            <div className="text-[13px] font-medium text-warm-700 mb-2">Før — spredt gjeld</div>
+          <div className="bg-amber-50 rounded-lg p-4">
+            <div className="text-[13px] font-medium text-amber-700 mb-2">Før — spredt gjeld</div>
             <div className="text-[14px] text-text-secondary space-y-1">
               <p>Forbrukslån 1: 150 000 kr × 18% = 3 900 kr/mnd</p>
               <p>Kredittkort: 80 000 kr × 22% = 2 200 kr/mnd</p>
               <p>Smålån: 70 000 kr × 20% = 2 100 kr/mnd</p>
-              <div className="border-t border-warm-200 pt-2 mt-2 font-semibold text-warm-800">Total: 8 200 kr/mnd</div>
+              <div className="border-t border-amber-200 pt-2 mt-2 font-semibold text-amber-800">Total: 8 200 kr/mnd</div>
             </div>
           </div>
           <div className="bg-mint-50 rounded-lg p-4">

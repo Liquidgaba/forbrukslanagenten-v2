@@ -28,7 +28,7 @@ export default function LanUtenKredittsjekk() {
         Mange søker etter «lån uten kredittsjekk» — men sannheten er at dette ikke finnes hos seriøse norske långivere. Her forklarer vi hvorfor, og viser deg hva du faktisk kan gjøre.
       </p>
 
-      <div className="bg-warm-50 border border-warm-200 rounded-xl p-5 sm:p-6 mb-10">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 sm:p-6 mb-10">
         <h2 className="text-[16px] font-semibold text-text-primary mb-2">⚠️ Advarsel om useriøse tilbydere</h2>
         <p className="text-[14px] text-text-secondary leading-relaxed">
           Nettsider som lover «lån uten kredittsjekk» er enten: 1) Misvisende (de gjør en forenklet sjekk), 2) Utenlandske aktører uten norsk konsesjon, eller 3) Svindel. Gå aldri inn på slike tilbud. Alle norske långivere er pålagt å gjøre kredittvurdering.
