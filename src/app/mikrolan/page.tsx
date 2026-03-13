@@ -26,7 +26,6 @@ export default function Mikrolan() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Mikrolån', url: '/mikrolan' }])) }} />
       <Breadcrumb items={[{ name: 'Smålån', href: '/smalan' }, { name: 'Mikrolån' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Mikrolån — raskt lån av små beløp</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Et mikrolån gir deg tilgang til små beløp raskt — typisk mellom 1 000 og 30 000 kr. Perfekt for uventede regninger, men vær oppmerksom på at rentene ofte er høyere enn for vanlige forbrukslån.
@@ -49,6 +48,10 @@ export default function Mikrolan() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

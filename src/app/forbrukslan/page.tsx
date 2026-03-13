@@ -30,7 +30,6 @@ export default function Forbrukslan() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Forbrukslån' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Forbrukslån i Norge — Den komplette guiden for 2026</h1>
       <p className="text-lg text-gray-600 mb-8">Alt du trenger å vite om forbrukslån. Fra hvordan det fungerer, til hva det koster, til hvilke banker som gir best vilkår. Rett på sak, uten tåkeprat.</p>
@@ -125,6 +124,10 @@ export default function Forbrukslan() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
       <InternalLinks exclude="/forbrukslan" />
     </div>
   )

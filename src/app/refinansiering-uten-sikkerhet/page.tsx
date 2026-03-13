@@ -25,7 +25,6 @@ export default function RefinansieringUtenSikkerhet() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Refinansiering', url: '/refinansiering' }, { name: 'Uten sikkerhet', url: '/refinansiering-uten-sikkerhet' }])) }} />
       <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Uten sikkerhet' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Refinansiering uten sikkerhet</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Eier du ikke bolig, men ønsker å samle dyre lån? Refinansiering uten sikkerhet lar deg slå sammen forbrukslån og kredittkort til ett lån — uten å stille pant.
@@ -42,6 +41,10 @@ export default function RefinansieringUtenSikkerhet() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

@@ -27,7 +27,6 @@ export default function LanePenger() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Låne penger', url: '/lane-penger' }])) }} />
       <Breadcrumb items={[{ name: 'Låne penger' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Låne penger — hvilken type lån passer for deg?</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Det finnes mange måter å låne penger på i Norge. Hvilken som er best avhenger av hvor mye du trenger, hva pengene skal brukes til, og din økonomiske situasjon.
@@ -65,6 +64,10 @@ export default function LanePenger() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

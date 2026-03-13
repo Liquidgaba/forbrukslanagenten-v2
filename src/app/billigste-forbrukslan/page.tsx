@@ -26,7 +26,6 @@ export default function BilligsteForbrukslan() {
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10">
       <Breadcrumb items={[{ name: 'Billigste forbrukslån' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">
         Billigste forbrukslån 2026 — sortert på rente
@@ -62,6 +61,10 @@ export default function BilligsteForbrukslan() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

@@ -26,7 +26,6 @@ export default function LanTilForerkort() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån til førerkort', url: '/lan-til-forerkort' }])) }} />
       <Breadcrumb items={[{ name: 'Lån til førerkort' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Lån til førerkort — slik finansierer du sertifikatet</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Førerkort er dyrt — mellom 25 000 og 45 000 kr for klasse B. Hvis du ikke har pengene på konto, kan et forbrukslån med lav rente være en smart investering i fremtiden din.
@@ -71,6 +70,10 @@ export default function LanTilForerkort() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

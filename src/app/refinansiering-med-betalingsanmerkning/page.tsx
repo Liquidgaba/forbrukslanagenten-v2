@@ -28,7 +28,6 @@ export default function RefinansieringMedBetalingsanmerkning() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Med betalingsanmerkning' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Refinansiering med betalingsanmerkning</h1>
 
@@ -91,6 +90,10 @@ export default function RefinansieringMedBetalingsanmerkning() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
       <InternalLinks exclude="/refinansiering-med-betalingsanmerkning" groups={['betalingsanmerkning', 'refinansiering']} />
     </div>
   )

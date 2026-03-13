@@ -25,7 +25,6 @@ export default function Smalan() {
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10">
       <Breadcrumb items={[{ name: 'Smålån' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">
         Smålån — borrow smart, even small amounts
@@ -79,6 +78,10 @@ export default function Smalan() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

@@ -28,7 +28,6 @@ export default function GarantertLanMedBetalingsanmerkning() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån med betalingsanmerkning', url: '/lan-med-betalingsanmerkning' }, { name: 'Garantert lån med betalingsanmerkning', url: '/garantert-lan-med-betalingsanmerkning' }])) }} />
 
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Garantert lån' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">&ldquo;Garantert lån med betalingsanmerkning&rdquo; — Finnes det?</h1>
       
@@ -100,6 +99,10 @@ export default function GarantertLanMedBetalingsanmerkning() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
       <InternalLinks exclude="/garantert-lan-med-betalingsanmerkning" groups={['betalingsanmerkning', 'refinansiering']} />
     </div>
   )

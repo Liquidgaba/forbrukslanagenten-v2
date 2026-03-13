@@ -26,7 +26,6 @@ export default function Nodlan() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Nødlån', url: '/nodlan' }])) }} />
       <Breadcrumb items={[{ name: 'Nødlån' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Nødlån — hva gjør du når det haster?</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Noen ganger oppstår det akutte behov for penger. Enten det er en uventet regning, en havarert bil eller en annen krise — det finnes alternativer. Vi ser på hva som finnes av nødlån i Norge, og hva du bør tenke på.
@@ -54,6 +53,10 @@ export default function Nodlan() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

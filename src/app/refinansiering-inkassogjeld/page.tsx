@@ -26,7 +26,6 @@ export default function RefinansieringInkassogjeld() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Refinansiering', url: '/refinansiering' }, { name: 'Inkassogjeld', url: '/refinansiering-inkassogjeld' }])) }} />
       <Breadcrumb items={[{ name: 'Refinansiering', href: '/refinansiering' }, { name: 'Inkassogjeld' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Refinansiering av inkassogjeld</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Inkassogjeld vokser raskt på grunn av forsinkelsesrenter, salærer og gebyrer. Ved å refinansiere med sikkerhet i bolig kan du stoppe kostnadsspiralen og samle alt til én overkommelig betaling.
@@ -66,6 +65,10 @@ export default function RefinansieringInkassogjeld() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

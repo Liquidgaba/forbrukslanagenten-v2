@@ -23,7 +23,6 @@ export default function LanMedInkasso() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <Breadcrumb items={[{ name: 'Lån med betalingsanmerkning', href: '/lan-med-betalingsanmerkning' }, { name: 'Lån med inkasso' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Lån med inkasso</h1>
       <p className="text-lg text-gray-600 mb-8">Du har fått brev fra et inkassobyrå. Det er ubehagelig, men det trenger ikke bety at alle dører er stengt. Her forklarer vi hva som gjelder.</p>
@@ -58,6 +57,10 @@ export default function LanMedInkasso() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
       <InternalLinks exclude="/lan-med-inkasso" groups={['betalingsanmerkning', 'refinansiering']} />
     </div>
   )

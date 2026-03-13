@@ -24,7 +24,6 @@ export default function LanMedSikkerhet() {
   return (
     <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10">
       <Breadcrumb items={[{ name: 'Lån med sikkerhet' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">
         Lån med sikkerhet i bolig — lavere rente, høyere beløp
@@ -67,6 +66,10 @@ export default function LanMedSikkerhet() {
       </section>
 
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

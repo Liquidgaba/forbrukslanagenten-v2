@@ -18,7 +18,6 @@ export default function Sammenlign() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <Breadcrumb items={[{ name: 'Sammenlign forbrukslån' }]} />
-      <AffiliateDisclaimer />
 
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Sammenlign forbrukslån</h1>
       <p className="text-lg text-gray-600 mb-8">Alle banker og lånemeglere i én oversikt. Sortert etter laveste rente. Klikk &ldquo;Søk nå&rdquo; for å gå direkte til søknadsskjemaet.</p>
@@ -38,6 +37,7 @@ export default function Sammenlign() {
       </div>
 
       <InternalLinks exclude="/sammenlign" />
+      <div className="mt-12"><AffiliateDisclaimer /></div>
     </div>
   )
 }

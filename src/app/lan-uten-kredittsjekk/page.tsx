@@ -23,7 +23,6 @@ export default function LanUtenKredittsjekk() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'Lån uten kredittsjekk', url: '/lan-uten-kredittsjekk' }])) }} />
       <Breadcrumb items={[{ name: 'Lån uten kredittsjekk' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">Lån uten kredittsjekk — finnes det?</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         Mange søker etter «lån uten kredittsjekk» — men sannheten er at dette ikke finnes hos seriøse norske långivere. Her forklarer vi hvorfor, og viser deg hva du faktisk kan gjøre.
@@ -62,6 +61,10 @@ export default function LanUtenKredittsjekk() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

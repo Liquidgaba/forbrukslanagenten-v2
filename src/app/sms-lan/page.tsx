@@ -26,7 +26,6 @@ export default function SmsLan() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Hjem', url: '/' }, { name: 'SMS-lån', url: '/sms-lan' }])) }} />
       <Breadcrumb items={[{ name: 'Smålån', href: '/smalan' }, { name: 'SMS-lån' }]} />
-      <AffiliateDisclaimer />
       <h1 className="text-[28px] sm:text-[36px] font-bold text-text-primary leading-tight mb-4">SMS-lån — raskt lån via mobilen</h1>
       <p className="text-[16px] text-text-secondary leading-relaxed max-w-3xl mb-10">
         SMS-lån har utviklet seg fra enkle tekstmeldinger til moderne digitale søknader. Konseptet er det samme: rask tilgang til små beløp. Men er det det billigste alternativet? Vi sammenligner.
@@ -43,6 +42,10 @@ export default function SmsLan() {
         </div>
       </section>
       <FAQ items={faqs} />
+
+      <div className="mt-12">
+        <AffiliateDisclaimer />
+      </div>
     </div>
   )
 }

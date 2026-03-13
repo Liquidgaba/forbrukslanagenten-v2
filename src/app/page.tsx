@@ -24,7 +24,7 @@ const faqs = [
 const categories = [
   { href: '/forbrukslan', title: 'Forbrukslån', desc: 'Alt om forbrukslån — renter, vilkår og tips', icon: '📊' },
   { href: '/refinansiering', title: 'Refinansiering', desc: 'Senk renten ved å samle lån', icon: '🔄' },
-  { href: '/lan-med-betalingsanmerkning', title: 'Lån med anmerkning', desc: 'Muligheter selv med prikk på rullebladet', icon: '🔓' },
+  { href: '/lan-med-betalingsanmerkning', title: 'Lån med anmerkning', desc: 'Muligheter selv med betalingsanmerkning', icon: '🔓' },
   { href: '/lan-uten-sikkerhet', title: 'Lån uten sikkerhet', desc: 'Usikrede lån uten pant i bolig', icon: '🏠' },
   { href: '/smalan', title: 'Smålån', desc: 'Mindre beløp — raskt utbetalt', icon: '⚡' },
   { href: '/samle-forbrukslan', title: 'Samle forbrukslån', desc: 'Slå sammen flere dyre lån til ett', icon: '📦' },
@@ -83,8 +83,7 @@ export default function Home() {
       </section>
 
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="py-10">
-          <AffiliateDisclaimer />
+        <div className="pt-10">
         </div>
 
         {/* Calculator */}
@@ -145,6 +144,10 @@ export default function Home() {
         </section>
 
         <FAQ items={faqs} />
+
+        <div className="mt-12">
+          <AffiliateDisclaimer />
+        </div>
 
         {/* Bottom SEO content */}
         <section className="mt-16 prose prose-gray max-w-none">
