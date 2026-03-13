@@ -21,15 +21,33 @@ export interface LoanProvider {
   rating: number // 1-5 editorial rating
 }
 
-// Channel ID from Adtraction - UPDATE THIS when forbrukslånagenten.no is registered
-const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || ''
+// Channel ID: bedretilbud.no (our approved channel in Adtraction)
+const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || '1691647901'
+
+// Programs where our channel is approved
+const APPROVED_AD_IDS = new Set([
+  1259715125,  // Okida
+  1061611455,  // Klikklån
+  1638602458,  // Zensum
+  1926379047,  // Långivere
+  1831295809,  // Nanofinans
+  1903082477,  // Heimfinans
+  1087917620,  // Ferratum
+  1437914822,  // Uno Finans
+  1575430439,  // Instabank
+  839045466,   // Thorn
+  1870436474,  // Kredittlånet
+  1870436013,  // Låneråd
+  1492826551,  // Viiga Lån
+  1746519962,  // Morrow Bank
+  1330052847,  // Paymark Finans
+])
 
 export function getTrackingUrl(adId: number, fallbackUrl?: string): string {
-  // If we have a channel ID, use Adtraction tracking
-  if (CHANNEL_ID) {
+  if (APPROVED_AD_IDS.has(adId)) {
     return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
   }
-  // Otherwise link directly to the bank (until we're approved)
+  // Not approved yet — link directly to bank
   return fallbackUrl || '#'
 }
 
