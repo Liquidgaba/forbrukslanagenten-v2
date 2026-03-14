@@ -106,7 +106,7 @@ export default function Lan200000() {
         <ul>
           <li>For å finansiere løpende forbruk du egentlig ikke har råd til</li>
           <li>Investeringer med høy risiko (krypto, spekulative aksjer)</li>
-          <li>Hvis du allerede har >3x bruttoinntekt i gjeld</li>
+          <li>Hvis du allerede har mer enn 3x bruttoinntekt i gjeld</li>
           <li>Hvis boligkjøp er innen 2 år (påvirker lånerammen)</li>
           <li>For å betale ned annen gjeld uten å endre forbruksmønster</li>
         </ul>
