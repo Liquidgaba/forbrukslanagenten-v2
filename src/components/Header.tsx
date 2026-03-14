@@ -32,21 +32,17 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center">
             {navItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-[14px] font-medium rounded-lg transition-colors"
+                className="px-3 py-2 text-[13px] font-medium rounded-lg transition-colors whitespace-nowrap"
                 style={{color: '#3d2010'}}
               >
                 {item.label}
               </Link>
             ))}
-            {/* Outline + filled — like Fjordkraft's nav CTAs */}
-            <Link href="#topp-lan" className="btn-outline ml-2 text-[14px] px-5 py-2">
-              Se beste lån
-            </Link>
           </nav>
 
           {/* Mobile toggle */}
