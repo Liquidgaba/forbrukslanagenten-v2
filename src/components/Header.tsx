@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 const navItems = [
   { href: '/forbrukslan', label: 'Forbrukslån' },
+  { href: '/kredittkort', label: 'Kredittkort' },
   { href: '/lan-med-betalingsanmerkning', label: 'Med anmerkning' },
   { href: '/refinansiering', label: 'Refinansiering' },
   { href: '/smalan', label: 'Smålån' },
