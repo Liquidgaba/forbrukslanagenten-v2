@@ -40,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/lan-uten-kredittsjekk', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/lan-til-forerkort', priority: 0.6, changeFrequency: 'monthly' as const },
 
+    // Beløpsspecifikke sider (high search volume)
+    { path: '/lan-50000', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/lan-100000', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/lan-200000', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/lan-500000', priority: 0.7, changeFrequency: 'monthly' as const },
+
     // Loan purposes
     { path: '/lan-til-oppussing', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/bobil-lan', priority: 0.6, changeFrequency: 'monthly' as const },
