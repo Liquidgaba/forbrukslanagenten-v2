@@ -42,9 +42,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Beløpsspecifikke sider (high search volume)
     { path: '/lan-50000', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/lan-75000', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/lan-100000', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/lan-150000', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/lan-200000', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/lan-300000', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/lan-400000', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/lan-500000', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/lan-600000', priority: 0.6, changeFrequency: 'monthly' as const },
+
+    // Kredittkort (high EPC, good volume)
+    { path: '/kredittkort', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/beste-kredittkort', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/kredittkort-uten-arsavgift', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/kredittkort-med-bonus', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/kredittkort-reise', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/kredittkort-reiseforsikring', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/kredittkort-cashback', priority: 0.8, changeFrequency: 'monthly' as const },
 
     // Loan purposes
     { path: '/lan-til-oppussing', priority: 0.7, changeFrequency: 'monthly' as const },
