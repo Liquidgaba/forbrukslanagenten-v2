@@ -23,6 +23,13 @@ export interface CreditCard {
   description: string
   idealFor: string[]
   affiliateUrl: string | null
+  insurance?: {
+    travelCancellation: number
+    travelDelay: boolean
+    lostLuggage: boolean
+    medical: boolean
+    familyIncluded: boolean
+  }
 }
 
 const CHANNEL_ID = process.env.NEXT_PUBLIC_ADTRACTION_CHANNEL_ID || '1691647901'
@@ -197,4 +204,13 @@ export function getCreditCardsWithBestBonus(): CreditCard[] {
 
 export function getTopCreditCards(limit: number = 5): CreditCard[] {
   return creditCards.sort((a, b) => b.rating - a.rating).slice(0, limit)
+}
+
+export function getCreditCardsWithTravelInsurance(): CreditCard[] {
+  return creditCards
+    .filter(c => c.features.some(f => 
+      f.toLowerCase().includes('reiseforsikring') || 
+      f.toLowerCase().includes('forsikring')
+    ))
+    .sort((a, b) => b.rating - a.rating)
 }
