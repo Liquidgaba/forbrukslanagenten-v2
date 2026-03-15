@@ -27,7 +27,17 @@ const linkGroups = {
     { href: '/beste-kredittkort', label: 'Beste kredittkort 2026' },
     { href: '/kredittkort-uten-arsavgift', label: 'Kredittkort uten årsavgift' },
     { href: '/kredittkort-med-bonus', label: 'Kredittkort med bonus' },
-    { href: '/kredittkort-a-kasse', label: 'Kredittkort A-kasse' },
+    { href: '/kredittkort-reise', label: 'Reisekredittkort' },
+    { href: '/kredittkort-reiseforsikring', label: 'Kredittkort med reiseforsikring' },
+    { href: '/kredittkort-cashback', label: 'Cashback kredittkort' },
+  ],
+  belop: [
+    { href: '/lan-50000', label: 'Lån 50 000 kr' },
+    { href: '/lan-100000', label: 'Lån 100 000 kr' },
+    { href: '/lan-150000', label: 'Lån 150 000 kr' },
+    { href: '/lan-200000', label: 'Lån 200 000 kr' },
+    { href: '/lan-300000', label: 'Lån 300 000 kr' },
+    { href: '/lan-500000', label: 'Lån 500 000 kr' },
   ],
 }
 
@@ -36,6 +46,7 @@ function getGroupLabel(group: keyof typeof linkGroups) {
     case 'betalingsanmerkning': return 'Betalingsanmerkning'
     case 'refinansiering': return 'Refinansiering'
     case 'kredittkort': return 'Kredittkort'
+    case 'belop': return 'Lånebeløp'
     default: return 'Forbrukslån'
   }
 }
