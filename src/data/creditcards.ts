@@ -38,13 +38,15 @@ export function getCreditCardTrackingUrl(adId: number): string {
   return `https://track.adtraction.com/t/t?a=${adId}&as=${CHANNEL_ID}&t=2&tk=1`
 }
 
+// TODO: Kredittkort-programmer — MÅ SØKE GODKJENNING via Adtraction
+// NÅ: Liste for informational purposes only — INGEN affiliate-lenker
 export const creditCards: CreditCard[] = [
   {
     id: 'santander-red',
     name: 'Santander Red',
     issuer: 'Santander',
     programId: 0,
-    adId: null,
+    adId: null, // PENDING — søk godkjenning via Adtraction
     logoUrl: '/logos/santander.png',
     url: 'https://www.santanderconsumer.no/kredittkort/',
     annualFee: 0,
@@ -67,7 +69,7 @@ export const creditCards: CreditCard[] = [
     rating: 4.2,
     description: 'Et godt allround-kort uten årsavgift med solide fordeler og 45 rentefrie dager.',
     idealFor: ['Daglig bruk', 'Reise', 'Online shopping'],
-    affiliateUrl: null,
+    affiliateUrl: null, // PENDING — ikke godkjent
   },
   {
     id: 'seb-selected',
